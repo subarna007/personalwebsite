@@ -3,29 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Subarna Dahal: computer vision and Nepali NLP research</title>
-<meta name="description" content="Subarna Dahal, MSc IT (AI and ML) graduate from Nepal. Research on glacial lake mapping from satellite images, skin lesion classification and Nepali NLP, with papers and code. Looking for a PhD position starting in 2027.">
-<meta property="og:title" content="Subarna Dahal: medical imaging and Nepali NLP">
-<meta property="og:description" content="Research projects, results and code by Subarna Dahal.">
+<title>Subarna Dahal: satellite images, medical images and Nepali NLP</title>
+<meta name="description" content="Subarna Dahal, MSc IT (AI and ML), Lalitpur, Nepal. Research on glacial lake mapping from Sentinel-2, skin lesion classification and Nepali NLP, with papers, code and live apps.">
+<meta property="og:title" content="Subarna Dahal: research, papers and apps">
+<meta property="og:description" content="Glacial lake mapping, skin lesion classification and Nepali NLP. Papers, code and live apps.">
 <meta property="og:image" content="img/gradcam-strip.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314252A'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23fff' text-anchor='middle'%3ESD%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#102230">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23102230'/%3E%3Cpath d='M4 24l7-10 4 5 4-8 9 13z' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Mukta:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-paper" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></symbol>
+    <symbol id="i-open" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5M22 9v6"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M7 7h4v4c0 3-1.5 5-4 6M15 7h4v4c0 3-1.5 5-4 6"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+    <symbol id="i-sat" viewBox="0 0 24 24"><path d="M13 7l4 4M9.5 10.5l4 4M4 14l6 6M14 4l6 6M7 11l3-3 6 6-3 3z"/><path d="M4 20c0-2 1-3 3-3"/></symbol>
+    <symbol id="i-scope" viewBox="0 0 24 24"><path d="M6 21h12M9 21v-3a5 5 0 0 0 9-3M12 3l3 3-5 5-3-3zM13 9l3 3"/><circle cx="16.5" cy="15" r="0"/></symbol>
+    <symbol id="i-lang" viewBox="0 0 24 24"><path d="M4 5h9M8.5 3v2M6 5c1 4 3.5 6.5 7 8M11 5c-1 4-3.5 7-7 9M13 21l4.5-10L22 21M14.5 18h6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 4h5v5M9 20H4v-5M20 4l-6 6M4 20l6-6"/></symbol>
+    <symbol id="i-hotel" viewBox="0 0 24 24"><path d="M3 20V9l9-5 9 5v11M3 20h18M9 20v-5h6v5"/></symbol>
+    <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 5h-5L8 10zM12 3v4M21 10l-5 0M3 10h5M7 20l2.5-5M17 20l-2.5-5"/></symbol>
+  </defs>
+</svg>
+
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="#top">Subarna Dahal</a>
-    <nav aria-label="Main">
+    <a class="brand" href="#top" aria-label="Subarna Dahal, back to top">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 25l8-12 4.5 6 4.5-9L29 25z"/></svg>
+      Subarna Dahal
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+    <nav id="nav" aria-label="Main">
       <a href="#research">Research</a>
       <a href="#papers">Papers</a>
       <a href="#apps">Apps</a>
       <a href="#about">About</a>
-      <a class="nav-contact" href="mailto:dahalsubarna9@gmail.com">Contact</a>
+      <a class="nav-contact" href="#contact"><svg class="ic"><use href="#i-mail"/></svg>Contact</a>
     </nav>
   </div>
 </header>
@@ -33,37 +64,75 @@
 <main id="main">
 
 <section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <h1>Subarna Dahal</h1>
-      <p class="lede">I build deep-learning models for <strong>satellite and medical images</strong> and for <strong>Nepali-language text</strong>, and I care most about testing them honestly: no data leakage, metrics that match how the model would be used, and results others can reproduce.</p>
-      <p class="status">MSc in IT (Artificial Intelligence and Machine Learning), Lalitpur, Nepal.<br>Looking for a <strong>PhD position starting in 2027</strong> in computer vision, NLP or medical AI.</p>
-      <p class="actions">
-        <a class="btn btn-solid" href="mailto:dahalsubarna9@gmail.com">Email me</a>
-        <a class="btn" href="https://github.com/subarna007">GitHub profile</a>
-      </p>
-    </div>
-    <dl class="facts">
-      <div><dt>Research interests</dt><dd>Computer vision for medical and satellite images, low-resource NLP, LLM evaluation</dd></div>
-      <div><dt>Main tools</dt><dd>PyTorch, timm, Hugging Face Transformers, scikit-learn, Sentinel-2 and STAC</dd></div>
-      <div><dt>Languages</dt><dd>English, Nepali, Hindi</dd></div>
-    </dl>
+  <div class="wrap hero-inner">
+    <p class="hello">Namaste, I'm</p>
+    <h1>Subarna Dahal</h1>
+    <p class="lede">I build deep-learning models for satellite images, medical images and Nepali text, and I put as much work into testing them as into training them.</p>
+    <ul class="meta">
+      <li><svg class="ic"><use href="#i-cap"/></svg>MSc in IT, Artificial Intelligence and Machine Learning</li>
+      <li><svg class="ic"><use href="#i-pin"/></svg>Lalitpur, Nepal</li>
+    </ul>
+    <p class="actions">
+      <a class="btn btn-solid" href="#research">See my research</a>
+      <a class="btn" href="mailto:dahalsubarna9@gmail.com"><svg class="ic"><use href="#i-mail"/></svg>Email</a>
+      <a class="btn btn-icon" href="https://github.com/subarna007" aria-label="GitHub"><svg class="ic"><use href="#i-github"/></svg></a>
+    </p>
   </div>
-  <figure class="strip wrap">
-    <img src="img/gradcam-strip.jpg" width="1800" height="535" alt="Seven dermoscopic images, one per skin lesion class, each above a Grad-CAM heat map showing where the classifier looked. One benign keratosis is wrongly predicted as melanoma.">
-    <figcaption>Where my skin lesion classifier looks. Top: test images from the seven ISIC 2018 classes. Bottom: Grad-CAM for the predicted class. The label in red is a mistake: a benign keratosis called melanoma.</figcaption>
-  </figure>
+
+  <svg class="ridge" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+    <path class="ridge-back" d="M0 230 L90 190 L150 205 L240 140 L300 168 L390 96 L450 130 L520 70 L585 118 L640 92 L720 150 L800 104 L860 128 L930 60 L990 98 L1060 80 L1130 140 L1210 110 L1290 160 L1360 132 L1440 170"/>
+    <path class="ridge-front" d="M0 250 L120 214 L200 232 L300 178 L380 206 L470 150 L540 186 L620 140 L700 196 L780 160 L870 210 L960 150 L1040 184 L1120 166 L1220 214 L1320 188 L1440 220"/>
+  </svg>
+  <div class="wrap topics">
+    <a class="topic" href="#glacial">
+      <span class="topic-img flip">
+        <img src="img/thumb-glacial.jpg" width="480" height="480" alt="">
+        <img class="over" src="img/thumb-glacial-mask.jpg" width="480" height="480" alt="">
+      </span>
+      <span class="topic-body">
+        <span class="topic-tag"><svg class="ic"><use href="#i-sat"/></svg>Satellite images</span>
+        <b>Glacial lakes above the Bhotekoshi floods</b>
+        <span class="hint">Hover or tap the tile to see the lakes the model found</span>
+      </span>
+    </a>
+    <a class="topic" href="#skin">
+      <span class="topic-img flip">
+        <img src="img/thumb-skin.jpg" width="480" height="480" alt="">
+        <img class="over" src="img/thumb-skin-cam.jpg" width="480" height="480" alt="">
+      </span>
+      <span class="topic-body">
+        <span class="topic-tag"><svg class="ic"><use href="#i-scope"/></svg>Medical images</span>
+        <b>Skin lesion classification</b>
+        <span class="hint">Hover or tap to see where the model looks</span>
+      </span>
+    </a>
+    <a class="topic" href="#nepali">
+      <span class="topic-img words" aria-hidden="true">
+        <span lang="ne" class="w w1">सकारात्मक</span>
+        <span lang="ne" class="w w2">तटस्थ</span>
+        <span lang="ne" class="w w3">नकारात्मक</span>
+      </span>
+      <span class="topic-body">
+        <span class="topic-tag"><svg class="ic"><use href="#i-lang"/></svg>Nepali language</span>
+        <b>Fine-tuning versus LLMs for Nepali sentiment</b>
+        <span class="hint">Positive, neutral or negative: who reads Nepali better?</span>
+      </span>
+    </a>
+  </div>
 </section>
 
 <section id="research" class="section">
   <div class="wrap">
-    <h2 class="section-title">Research</h2>
-    <p class="section-intro">Three projects, each written up as a short paper: why I did it, what I did, what I found and what is still open. Every number comes from code you can run yourself.</p>
+    <div class="section-head">
+      <h2 class="section-title">Research</h2>
+      <p class="section-intro">Three projects, each written up as a short paper: why I did it, what I did, what I found and what is still open. Every number comes from code you can run yourself.</p>
+    </div>
 
-    <article class="study" id="glacial">
+    <article class="study reveal" id="glacial">
       <div class="study-text">
+        <p class="tag"><svg class="ic"><use href="#i-sat"/></svg>Satellite images</p>
         <h3>Mapping glacial lakes in the Himalaya with Sentinel-2</h3>
-        <p class="kicker">Computer vision for satellite images, with a case study of the 2025 and 2026 Bhotekoshi floods</p>
+        <p class="kicker">With a case study of the 2025 and 2026 Bhotekoshi floods</p>
         <p>Floods came down the Lende river into the Bhotekoshi at Rasuwagadhi on 8 July 2025 and again on 26 August 2026, both with almost no warning. I trained a U-Net to find glacial lakes in free Sentinel-2 images, tested it on parts of the Himalaya it never saw, and then pointed it at the valley that flooded.</p>
         <ul class="points">
           <li>Labels from the hand-checked Hi-MAG inventory; training, validation and test tiles from separate longitude strips.</li>
@@ -74,30 +143,31 @@
           <caption>Held-out test strips: 160 tiles, 1,049 km², 170 lakes</caption>
           <thead><tr><th scope="col">Method</th><th scope="col">Pixel IoU (95% CI)</th><th scope="col">Lakes found</th></tr></thead>
           <tbody>
-            <tr><th scope="row">NDWI threshold</th><td>0.490 (0.41–0.57)</td><td>45.9%</td></tr>
-            <tr><th scope="row">MNDWI threshold</th><td>0.039 (0.02–0.08)</td><td>8.2%</td></tr>
-            <tr><th scope="row">U-Net (ResNet-34)</th><td><b>0.669</b> (0.58–0.74)</td><td><b>70.6%</b></td></tr>
+            <tr><th scope="row">NDWI threshold</th><td>0.490 (0.41–0.57)</td><td><span class="bar" style="--v:45.9"></span>45.9%</td></tr>
+            <tr><th scope="row">MNDWI threshold</th><td>0.039 (0.02–0.08)</td><td><span class="bar" style="--v:8.2"></span>8.2%</td></tr>
+            <tr class="best"><th scope="row">U-Net (ResNet-34)</th><td><b>0.669</b> (0.58–0.74)</td><td><span class="bar" style="--v:70.6"></span><b>70.6%</b></td></tr>
           </tbody>
         </table>
         <p>In the flood area the model gives stable outlines for the large lakes over eight years and finds one lake that grew every year, from 0.43 to 0.73 km². The main lesson is about clouds, not the classifier: there was <b>no clear optical image for seven weeks around the 2026 flood</b>, so warnings will need radar.</p>
         <p class="paper-links">
-          <a class="btn btn-solid" href="papers/Dahal_2026_glacial_lake_mapping.pdf" target="_blank" rel="noopener">Read the paper</a>
-          <a class="btn" href="papers/Dahal_2026_glacial_lake_mapping.pdf" download>Download PDF</a>
-          <a class="btn" href="https://github.com/subarna007/glacial-lake-mapping-sentinel2">Code and results</a>
+          <a class="btn btn-solid" href="papers/Dahal_2026_glacial_lake_mapping.pdf" target="_blank" rel="noopener"><svg class="ic"><use href="#i-paper"/></svg>Read the paper</a>
+          <a class="btn" href="papers/Dahal_2026_glacial_lake_mapping.pdf" download><svg class="ic"><use href="#i-download"/></svg>PDF</a>
+          <a class="btn" href="https://github.com/subarna007/glacial-lake-mapping-sentinel2"><svg class="ic"><use href="#i-code"/></svg>Code and results</a>
         </p>
       </div>
       <figure class="study-fig">
-        <img src="img/glacial-lende.jpg" width="1500" height="730" loading="lazy" alt="Map of the Lende and upper Bhotekoshi area with three lakes marked, total lake area per year from 2017 to 2024, and area of the three marked lakes.">
+        <button class="zoom" type="button"><img src="img/glacial-lende.jpg" width="1500" height="730" loading="lazy" alt="Map of the Lende and upper Bhotekoshi area with three lakes marked, total lake area per year from 2017 to 2024, and area of the three marked lakes."><span class="zoom-ic"><svg class="ic"><use href="#i-expand"/></svg></span></button>
         <figcaption>The Lende and upper Bhotekoshi area: total lake area per autumn and three lakes that changed.</figcaption>
-        <img src="img/glacial-size.jpg" width="1200" height="617" loading="lazy" alt="Bar chart of the share of test lakes found by NDWI, MNDWI and the U-Net in three size classes.">
+        <button class="zoom" type="button"><img src="img/glacial-size.jpg" width="1200" height="617" loading="lazy" alt="Bar chart of the share of test lakes found by NDWI, MNDWI and the U-Net in three size classes."><span class="zoom-ic"><svg class="ic"><use href="#i-expand"/></svg></span></button>
         <figcaption>Share of test lakes found, by size. The U-Net's gain is largest for lakes of 0.02–0.1 km².</figcaption>
       </figure>
     </article>
 
-    <article class="study study-flip" id="skin">
+    <article class="study study-flip reveal" id="skin">
       <div class="study-text">
+        <p class="tag"><svg class="ic"><use href="#i-scope"/></svg>Medical images</p>
         <h3>Skin lesion classification with honest evaluation</h3>
-        <p class="kicker">Computer vision for medical images, a follow-up to my MSc capstone</p>
+        <p class="kicker">A follow-up to my MSc capstone</p>
         <p>My capstone model (ResNet-50) reached 76.7% accuracy but found only 36% of melanomas, and it had been tested on a split where photos of the same lesion could appear in both training and test data. In this follow-up I rebuilt the evaluation first, then the model.</p>
         <ul class="points">
           <li>Split the 10,015 HAM10000 images by <em>lesion</em>, so no lesion is in both train and test.</li>
@@ -106,56 +176,54 @@
         </ul>
         <table class="results">
           <caption>Held-out test set, 1,508 images</caption>
-          <thead><tr><th scope="col">Model</th><th scope="col">Balanced accuracy</th><th scope="col">Macro AUC</th><th scope="col">Melanoma sensitivity</th></tr></thead>
+          <thead><tr><th scope="col">Model</th><th scope="col">Balanced acc.</th><th scope="col">Macro AUC</th><th scope="col">Melanoma sensitivity</th></tr></thead>
           <tbody>
-            <tr><th scope="row">ResNet-50 baseline</th><td>0.713</td><td>0.932</td><td>62.2%</td></tr>
-            <tr><th scope="row">ConvNeXt-Tiny</th><td><b>0.767</b></td><td><b>0.966</b></td><td><b>82.1%</b></td></tr>
+            <tr><th scope="row">ResNet-50 baseline</th><td>0.713</td><td>0.932</td><td><span class="bar" style="--v:62.2"></span>62.2%</td></tr>
+            <tr class="best"><th scope="row">ConvNeXt-Tiny</th><td><b>0.767</b></td><td><b>0.966</b></td><td><span class="bar" style="--v:82.1"></span><b>82.1%</b></td></tr>
           </tbody>
         </table>
         <p>With the screening threshold the model flags <b>94.2% of test melanomas</b> at 75.5% specificity. The weak points are false alarms on benign moles and a drop on actinic keratosis. I also built DermAssist, a prototype web app around the model with Grad-CAM, ABCD measurements and similar cases.</p>
         <p class="paper-links">
-          <a class="btn btn-solid" href="papers/Dahal_2026_skin_lesion_classification.pdf" target="_blank" rel="noopener">Read the paper</a>
-          <a class="btn" href="papers/Dahal_2026_skin_lesion_classification.pdf" download>Download PDF</a>
-          <a class="btn" href="https://github.com/subarna007/skin-lesion-classification-isic2018">Code and results</a>
+          <a class="btn btn-solid" href="papers/Dahal_2026_skin_lesion_classification.pdf" target="_blank" rel="noopener"><svg class="ic"><use href="#i-paper"/></svg>Read the paper</a>
+          <a class="btn" href="papers/Dahal_2026_skin_lesion_classification.pdf" download><svg class="ic"><use href="#i-download"/></svg>PDF</a>
+          <a class="btn" href="https://github.com/subarna007/skin-lesion-classification-isic2018"><svg class="ic"><use href="#i-code"/></svg>Code and results</a>
         </p>
       </div>
       <figure class="study-fig">
-        <img src="img/skin-per-class.jpg" width="1400" height="626" loading="lazy" alt="Bar chart of sensitivity for each of the seven classes, comparing the ResNet-50 baseline with ConvNeXt-Tiny.">
+        <button class="zoom" type="button"><img src="img/gradcam-strip.jpg" width="1800" height="535" loading="lazy" alt="Seven dermoscopic images, one per class, each above a Grad-CAM heat map. One benign keratosis is wrongly predicted as melanoma."><span class="zoom-ic"><svg class="ic"><use href="#i-expand"/></svg></span></button>
+        <figcaption>Where the classifier looks, one test image per class. The label in red is a mistake: a benign keratosis called melanoma.</figcaption>
+        <button class="zoom" type="button"><img src="img/skin-per-class.jpg" width="1400" height="626" loading="lazy" alt="Bar chart of sensitivity for each of the seven classes, comparing the ResNet-50 baseline with ConvNeXt-Tiny."><span class="zoom-ic"><svg class="ic"><use href="#i-expand"/></svg></span></button>
         <figcaption>Sensitivity per class, ResNet-50 baseline compared with ConvNeXt-Tiny.</figcaption>
-        <div class="shot-row two">
-          <a href="img/web-analyse.jpg"><img src="img/web-analyse.jpg" width="1400" height="875" loading="lazy" alt="DermAssist page for uploading an image to analyse"></a>
-          <a href="img/skin-abcd.jpg"><img src="img/skin-abcd.jpg" width="1200" height="879" loading="lazy" alt="ABCD measurements of a lesion: asymmetry, border, colour and diameter"></a>
-        </div>
-        <figcaption>DermAssist, the prototype web app: image upload and ABCD measurements.</figcaption>
       </figure>
     </article>
 
-    <article class="study" id="nepali">
+    <article class="study reveal" id="nepali">
       <div class="study-text">
+        <p class="tag"><svg class="ic"><use href="#i-lang"/></svg>Nepali language</p>
         <h3>Is fine-tuning still worth it for Nepali?</h3>
-        <p class="kicker">NLP for a low-resource language, compared with large language models</p>
+        <p class="kicker">A small open LLM against fine-tuned models on Nepali tweets</p>
         <p>Can a general LLM classify Nepali text with no training, or is it still worth collecting labels and fine-tuning a model? I compared four approaches on the same test set of Nepali COVID-19 tweets, after removing duplicate tweets so none could leak from training into test.</p>
         <table class="results">
           <caption>Test set, 3,346 tweets. Macro-F1 with 95% bootstrap intervals.</caption>
           <thead><tr><th scope="col">Method</th><th scope="col">Labels used</th><th scope="col">Macro-F1</th></tr></thead>
           <tbody>
-            <tr><th scope="row">TF-IDF + logistic regression</th><td>26,764</td><td>0.657 (0.64–0.68)</td></tr>
-            <tr><th scope="row">Qwen2.5-3B, zero-shot</th><td>0</td><td>0.480 (0.46–0.50)</td></tr>
-            <tr><th scope="row">Qwen2.5-3B, 2 examples per class</th><td>6</td><td>0.539 (0.52–0.56)</td></tr>
-            <tr><th scope="row">Fine-tuned XLM-RoBERTa</th><td>26,764</td><td><b>0.707</b> (0.69–0.73)</td></tr>
+            <tr><th scope="row">TF-IDF + logistic regression</th><td>26,764</td><td><span class="bar" style="--v:65.7"></span>0.657 (0.64–0.68)</td></tr>
+            <tr><th scope="row">Qwen2.5-3B, zero-shot</th><td>0</td><td><span class="bar" style="--v:48.0"></span>0.480 (0.46–0.50)</td></tr>
+            <tr><th scope="row">Qwen2.5-3B, 2 examples per class</th><td>6</td><td><span class="bar" style="--v:53.9"></span>0.539 (0.52–0.56)</td></tr>
+            <tr class="best"><th scope="row">Fine-tuned XLM-RoBERTa</th><td>26,764</td><td><span class="bar" style="--v:70.7"></span><b>0.707</b> (0.69–0.73)</td></tr>
           </tbody>
         </table>
         <p>Fine-tuning wins clearly, and even a character n-gram model beats the untrained LLM. The LLM's errors are biased, not random: zero-shot it calls 581 of 1,360 negative tweets positive, and six examples flip the bias the other way. Neutral tweets are hard for every method.</p>
         <p class="paper-links">
-          <a class="btn btn-solid" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" target="_blank" rel="noopener">Read the paper</a>
-          <a class="btn" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" download>Download PDF</a>
-          <a class="btn" href="https://github.com/subarna007/Nepali-Sentiment-finetune-vs-llm">Code and results</a>
+          <a class="btn btn-solid" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" target="_blank" rel="noopener"><svg class="ic"><use href="#i-paper"/></svg>Read the paper</a>
+          <a class="btn" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" download><svg class="ic"><use href="#i-download"/></svg>PDF</a>
+          <a class="btn" href="https://github.com/subarna007/Nepali-Sentiment-finetune-vs-llm"><svg class="ic"><use href="#i-code"/></svg>Code and results</a>
         </p>
       </div>
       <figure class="study-fig">
-        <img src="img/nepali-macro-f1.jpg" width="1400" height="597" loading="lazy" alt="Bar chart of macro-F1 for the four methods.">
+        <button class="zoom" type="button"><img src="img/nepali-macro-f1.jpg" width="1400" height="597" loading="lazy" alt="Bar chart of macro-F1 for the four methods."><span class="zoom-ic"><svg class="ic"><use href="#i-expand"/></svg></span></button>
         <figcaption>Macro-F1 by method.</figcaption>
-        <img src="img/nepali-per-class.jpg" width="1400" height="626" loading="lazy" alt="Bar chart of F1 for negative, neutral and positive tweets for each method.">
+        <button class="zoom" type="button"><img src="img/nepali-per-class.jpg" width="1400" height="626" loading="lazy" alt="Bar chart of F1 for negative, neutral and positive tweets for each method."><span class="zoom-ic"><svg class="ic"><use href="#i-expand"/></svg></span></button>
         <figcaption>F1 per class. Neutral tweets are the weak spot for all methods.</figcaption>
       </figure>
     </article>
@@ -164,28 +232,46 @@
 
 <section id="papers" class="section section-alt">
   <div class="wrap">
-    <h2 class="section-title">Papers</h2>
+    <div class="section-head">
+      <h2 class="section-title">Papers</h2>
+      <p class="section-intro">Preprints, not yet peer reviewed. Read them in the browser, download the PDF, or copy a citation.</p>
+    </div>
     <ul class="paper-list">
-      <li>
+      <li class="reveal">
+        <span class="paper-ic"><svg class="ic"><use href="#i-sat"/></svg></span>
         <div>
           <h3>Mapping glacial lakes in the central Himalaya with Sentinel-2: a spatially held-out comparison of a U-Net and water-index thresholds, with a case study of the Lende–Bhotekoshi floods</h3>
-          <p>Subarna Dahal · 2026 · preprint, 10 pages</p>
+          <p>Subarna Dahal, 2026. Preprint, 10 pages.</p>
         </div>
-        <p class="paper-links"><a class="btn btn-solid" href="papers/Dahal_2026_glacial_lake_mapping.pdf" target="_blank" rel="noopener">Read</a><a class="btn" href="papers/Dahal_2026_glacial_lake_mapping.pdf" download>PDF</a></p>
+        <p class="paper-links">
+          <a class="btn btn-solid" href="papers/Dahal_2026_glacial_lake_mapping.pdf" target="_blank" rel="noopener"><svg class="ic"><use href="#i-paper"/></svg>Read</a>
+          <a class="btn" href="papers/Dahal_2026_glacial_lake_mapping.pdf" download><svg class="ic"><use href="#i-download"/></svg>PDF</a>
+          <button class="btn cite" type="button" data-key="dahal2026glacial" data-title="Mapping glacial lakes in the central Himalaya with Sentinel-2: a spatially held-out comparison of a U-Net and water-index thresholds, with a case study of the Lende--Bhotekoshi floods" data-url="https://github.com/subarna007/glacial-lake-mapping-sentinel2"><svg class="ic"><use href="#i-quote"/></svg>Cite</button>
+        </p>
       </li>
-      <li>
+      <li class="reveal">
+        <span class="paper-ic"><svg class="ic"><use href="#i-scope"/></svg></span>
         <div>
           <h3>Lesion-grouped evaluation of deep learning for seven-class dermoscopic skin lesion classification, with a validation-tuned melanoma screening threshold</h3>
-          <p>Subarna Dahal · 2026 · preprint, 16 pages</p>
+          <p>Subarna Dahal, 2026. Preprint, 16 pages.</p>
         </div>
-        <p class="paper-links"><a class="btn btn-solid" href="papers/Dahal_2026_skin_lesion_classification.pdf" target="_blank" rel="noopener">Read</a><a class="btn" href="papers/Dahal_2026_skin_lesion_classification.pdf" download>PDF</a></p>
+        <p class="paper-links">
+          <a class="btn btn-solid" href="papers/Dahal_2026_skin_lesion_classification.pdf" target="_blank" rel="noopener"><svg class="ic"><use href="#i-paper"/></svg>Read</a>
+          <a class="btn" href="papers/Dahal_2026_skin_lesion_classification.pdf" download><svg class="ic"><use href="#i-download"/></svg>PDF</a>
+          <button class="btn cite" type="button" data-key="dahal2026skin" data-title="Lesion-grouped evaluation of deep learning for seven-class dermoscopic skin lesion classification, with a validation-tuned melanoma screening threshold" data-url="https://github.com/subarna007/skin-lesion-classification-isic2018"><svg class="ic"><use href="#i-quote"/></svg>Cite</button>
+        </p>
       </li>
-      <li>
+      <li class="reveal">
+        <span class="paper-ic"><svg class="ic"><use href="#i-lang"/></svg></span>
         <div>
           <h3>Is fine-tuning still worth it for a low-resource language? A controlled comparison of XLM-RoBERTa, a small open LLM and a character n-gram baseline for Nepali tweet sentiment</h3>
-          <p>Subarna Dahal · 2026 · preprint, 6 pages</p>
+          <p>Subarna Dahal, 2026. Preprint, 6 pages.</p>
         </div>
-        <p class="paper-links"><a class="btn btn-solid" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" target="_blank" rel="noopener">Read</a><a class="btn" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" download>PDF</a></p>
+        <p class="paper-links">
+          <a class="btn btn-solid" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" target="_blank" rel="noopener"><svg class="ic"><use href="#i-paper"/></svg>Read</a>
+          <a class="btn" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" download><svg class="ic"><use href="#i-download"/></svg>PDF</a>
+          <button class="btn cite" type="button" data-key="dahal2026nepali" data-title="Is fine-tuning still worth it for a low-resource language? A controlled comparison of XLM-RoBERTa, a small open LLM and a character n-gram baseline for Nepali tweet sentiment" data-url="https://github.com/subarna007/Nepali-Sentiment-finetune-vs-llm"><svg class="ic"><use href="#i-quote"/></svg>Cite</button>
+        </p>
       </li>
     </ul>
   </div>
@@ -193,38 +279,40 @@
 
 <section id="apps" class="section">
   <div class="wrap">
-    <h2 class="section-title">Apps you can try</h2>
-    <p class="section-intro">Web applications I built. Open them and use them.</p>
-    <div class="apps three">
-      <article class="app" id="dermassist">
-        <img src="img/app-dermassist.jpg" width="1200" height="750" loading="lazy" alt="DermAssist page for uploading a dermoscopic image to analyse">
-        <div>
-          <h3>DermAssist</h3>
-          <p>The skin lesion model from my research, in a web app: upload a dermoscopic image to get the seven-class probabilities, Grad-CAM maps, ABCD shape and colour measurements and similar cases. A research prototype, not a medical device.</p>
+    <div class="section-head">
+      <h2 class="section-title">Apps you can try</h2>
+      <p class="section-intro">Web applications I built. Two are live on the web; the third runs on your own computer.</p>
+    </div>
+    <div class="apps">
+      <article class="app reveal">
+        <a class="app-shot" href="projects/hotel/" target="_blank" rel="noopener"><img src="img/app-hotel.jpg" width="1200" height="755" loading="lazy" alt="All in One Hotel home page with a search box for rooms, adventures and dining"><span class="live">Live</span></a>
+        <div class="app-body">
+          <h3><svg class="ic"><use href="#i-hotel"/></svg>All in One Hotel</h3>
+          <p>A booking site for a fictional hotel in Pokhara: search rooms by date and guests, see how many are left, book rooms, adventures and packages, and order food. A redesign of my BSc final-year project.</p>
           <p class="paper-links">
-            <a class="btn" href="https://github.com/subarna007/skin-lesion-classification-isic2018">Code</a>
+            <a class="btn btn-solid" href="projects/hotel/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-open"/></svg>Open the website</a>
+            <a class="btn" href="https://github.com/subarna007/hotelwebsite"><svg class="ic"><use href="#i-code"/></svg>Code</a>
           </p>
         </div>
       </article>
-      <article class="app" id="hotel">
-        <a href="projects/hotel/"><img src="img/app-hotel.jpg" width="1200" height="755" loading="lazy" alt="All in One Hotel home page with a search box for rooms, adventures and dining"></a>
-        <div>
-          <h3>All in One Hotel</h3>
-          <p>A hotel booking site for a fictional hotel in Pokhara: search rooms by date and guests, filter and sort, see how many rooms are left, book rooms, adventures and packages, and order food. A redesign of my BSc final-year project.</p>
+      <article class="app reveal">
+        <a class="app-shot" href="https://fpl-helper-seven.vercel.app/" target="_blank" rel="noopener"><img src="img/app-fpl.jpg" width="1200" height="675" loading="lazy" alt="Fantasy Premier League helper showing a squad on a pitch"><span class="live">Live</span></a>
+        <div class="app-body">
+          <h3><svg class="ic"><use href="#i-ball"/></svg>Fantasy Premier League helper</h3>
+          <p>Enter any FPL team ID to see the squad on a pitch, fixture difficulty, expected points and a transfer plan. It reads live data from the official FPL API, so it follows the current season.</p>
           <p class="paper-links">
-            <a class="btn btn-solid" href="projects/hotel/" target="_blank" rel="noopener">Open the website</a>
-            <a class="btn" href="https://github.com/subarna007/hotelwebsite">Code</a>
+            <a class="btn btn-solid" href="https://fpl-helper-seven.vercel.app/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-open"/></svg>Open the app</a>
+            <a class="btn" href="https://github.com/subarna007/fpl-helper"><svg class="ic"><use href="#i-code"/></svg>Code</a>
           </p>
         </div>
       </article>
-      <article class="app" id="fpl">
-        <a href="https://fpl-helper-seven.vercel.app/" target="_blank" rel="noopener"><img src="img/app-fpl.jpg" width="1200" height="675" loading="lazy" alt="Fantasy Premier League dashboard showing a squad on a pitch"></a>
-        <div>
-          <h3>Fantasy Premier League helper</h3>
-          <p>Enter any FPL team ID to see the squad on a pitch, upcoming fixture difficulty, expected points and a transfer plan for the next gameweeks. It reads live data from the official FPL API, so it follows the current season.</p>
+      <article class="app reveal">
+        <a class="app-shot" href="https://github.com/subarna007/skin-lesion-classification-isic2018"><img src="img/app-dermassist.jpg" width="1200" height="750" loading="lazy" alt="DermAssist page for uploading a dermoscopic image to analyse"></a>
+        <div class="app-body">
+          <h3><svg class="ic"><use href="#i-scope"/></svg>DermAssist</h3>
+          <p>The skin lesion model in a web app: upload a dermoscopic image to get class probabilities, Grad-CAM maps, ABCD measurements and similar cases. The model is too large for free hosting, so for now it runs on your own computer; the setup takes a few commands. A research prototype, not a medical device.</p>
           <p class="paper-links">
-            <a class="btn btn-solid" href="https://fpl-helper-seven.vercel.app/" target="_blank" rel="noopener">Open the app</a>
-            <a class="btn" href="https://github.com/subarna007/fpl-helper">Code</a>
+            <a class="btn" href="https://github.com/subarna007/skin-lesion-classification-isic2018"><svg class="ic"><use href="#i-code"/></svg>Code and setup</a>
           </p>
         </div>
       </article>
@@ -234,10 +322,10 @@
 
 <section id="about" class="section section-alt">
   <div class="wrap about-grid">
-    <div>
+    <div class="about-text">
       <h2 class="section-title">About</h2>
-      <p>I live in Lalitpur, Nepal. I studied computer science, then worked as a junior IT officer and taught computer science at a school before doing my master's in AI and machine learning.</p>
-      <p>My capstone taught me that a good accuracy number can hide a model that misses the cases that matter. Since then I spend as much effort on how a model is tested as on the model itself. For my PhD I would like to work on computer vision for medical or satellite images, or on NLP, especially for languages and places with little data.</p>
+      <p>I live in Lalitpur, Nepal. I studied computer science, then worked as a junior IT officer and taught computer science at a school before doing my master's in artificial intelligence and machine learning.</p>
+      <p>My capstone taught me that a good accuracy number can hide a model that misses the cases that matter. Since then I spend as much effort on how a model is tested as on the model itself. The problems I keep coming back to are computer vision for medical and satellite images, and language technology for places with little data, like Nepal.</p>
     </div>
     <div>
       <h3 class="group">Education</h3>
@@ -251,8 +339,13 @@
         <li><span class="when">2024</span><div>Python with Data Science trainee, Broadway Infosys</div></li>
         <li><span class="when">2022–2023</span><div>Junior IT Officer, Brainworks Investment</div></li>
       </ol>
-      <h3 class="group">Skills</h3>
-      <p class="skills"><b>Machine learning:</b> PyTorch, timm, Hugging Face Transformers, scikit-learn, Grad-CAM, bootstrap confidence intervals, grouped data splits.<br><b>Programming and data:</b> Python, NumPy, pandas, SQL, Matplotlib, Seaborn, Tableau.<br><b>Remote sensing:</b> Sentinel-2, STAC and the Planetary Computer, xarray, rasterio, GeoPandas.<br><b>Tools:</b> Git, Jupyter, Kaggle GPUs, LaTeX, FastAPI, Docker.</p>
+      <h3 class="group">Tools I use</h3>
+      <ul class="chips">
+        <li>PyTorch</li><li>timm</li><li>Hugging Face Transformers</li><li>scikit-learn</li><li>Grad-CAM</li>
+        <li>Python</li><li>NumPy</li><li>pandas</li><li>SQL</li><li>Matplotlib</li>
+        <li>Sentinel-2</li><li>STAC</li><li>xarray</li><li>rasterio</li><li>GeoPandas</li>
+        <li>Git</li><li>Docker</li><li>FastAPI</li><li>LaTeX</li><li>Kaggle GPUs</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -260,13 +353,30 @@
 </main>
 
 <footer class="site-footer" id="contact">
+  <svg class="ridge ridge-foot" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120 L0 90 L120 60 L200 78 L300 30 L380 62 L470 20 L560 70 L640 44 L720 80 L820 36 L900 58 L980 14 L1080 66 L1160 40 L1260 76 L1360 50 L1440 70 L1440 120 Z"/></svg>
   <div class="wrap footer-row">
     <div>
-      <p class="footer-big">Let's talk about a PhD project.</p>
-      <p class="footer-links"><a href="mailto:dahalsubarna9@gmail.com">dahalsubarna9@gmail.com</a><a href="https://github.com/subarna007">github.com/subarna007</a></p>
+      <p class="footer-big">Questions about a paper, the code or the data?</p>
+      <p class="footer-sub">I'm happy to talk about any of these projects.</p>
+      <p class="footer-links">
+        <a href="mailto:dahalsubarna9@gmail.com"><svg class="ic"><use href="#i-mail"/></svg>dahalsubarna9@gmail.com</a>
+        <a href="https://github.com/subarna007"><svg class="ic"><use href="#i-github"/></svg>github.com/subarna007</a>
+      </p>
     </div>
-    <p class="small">Lalitpur, Nepal</p>
+    <p class="small"><svg class="ic"><use href="#i-pin"/></svg>Lalitpur, Nepal</p>
   </div>
 </footer>
+
+<button class="to-top" type="button" aria-label="Back to top"><svg class="ic"><use href="#i-up"/></svg></button>
+
+<dialog class="lightbox" aria-label="Enlarged figure">
+  <button class="lb-close" type="button" aria-label="Close"><svg class="ic"><use href="#i-close"/></svg></button>
+  <img alt="">
+  <p class="lb-cap"></p>
+</dialog>
+
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="site.js"></script>
 </body>
 </html>
