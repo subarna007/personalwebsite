@@ -1,604 +1,271 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subarna Dahal: medical imaging and Nepali NLP</title>
+<meta name="description" content="Subarna Dahal, MSc IT (AI and ML) graduate from Nepal. Deep learning for skin lesion images and NLP for Nepali, evaluated carefully. Looking for a PhD position starting in 2027.">
+<meta property="og:title" content="Subarna Dahal: medical imaging and Nepali NLP">
+<meta property="og:description" content="Research projects, results and code by Subarna Dahal.">
+<meta property="og:image" content="img/gradcam-strip.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314252A'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23fff' text-anchor='middle'%3ESD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/sicon.png" type="image/x-icon">
-     
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top">Subarna Dahal</a>
+    <nav aria-label="Main">
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#try">Try them</a>
+      <a href="#about">About</a>
+      <a class="nav-contact" href="mailto:dahalsubarna9@gmail.com">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+<main id="main">
 
-      <title>Subarna Dahal</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         <nav class="nav container">
-            <a href="#" class="nav__logo">
-            <span class="nav__logo-circle">S</span>
-            <span class="nav__logo-name">SU3ARNA</span>
-            </a>
-            <div class="nav__menu" id="nav-menu">
-            <span class="nav__title">Menu</span>
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Subarna Dahal</h1>
+      <p class="lede">I train deep-learning models for <strong>medical images</strong> and for <strong>Nepali-language text</strong>, and I care most about testing them honestly: no data leakage, metrics that match how the model would be used, and results others can reproduce.</p>
+      <p class="status">MSc in IT (Artificial Intelligence and Machine Learning), Lalitpur, Nepal.<br>Looking for a <strong>PhD position starting in 2027</strong> in computer vision, NLP or medical AI.</p>
+      <p class="actions">
+        <a class="btn btn-solid" href="mailto:dahalsubarna9@gmail.com">Email me</a>
+        <a class="btn" href="https://github.com/subarna007">GitHub profile</a>
+      </p>
+    </div>
+    <dl class="facts">
+      <div><dt>Research interests</dt><dd>Medical image analysis, explainability, low-resource NLP, LLM evaluation</dd></div>
+      <div><dt>Main tools</dt><dd>PyTorch, timm, Hugging Face Transformers, scikit-learn</dd></div>
+      <div><dt>Languages</dt><dd>English, Nepali, Hindi</dd></div>
+    </dl>
+  </div>
+  <figure class="strip wrap">
+    <img src="img/gradcam-strip.jpg" width="1800" height="535" alt="Seven dermoscopic images, one per skin lesion class, each above a Grad-CAM heat map showing where the classifier looked. One benign keratosis is wrongly predicted as melanoma.">
+    <figcaption>Where my skin lesion classifier looks. Top: test images from the seven ISIC 2018 classes. Bottom: Grad-CAM for the predicted class. The label in red is a mistake: a benign keratosis called melanoma.</figcaption>
+  </figure>
+</section>
 
-            <h3 class="nav__name">SU3ARNA</h3>
-            <ul class="nav__list">
-               <li class="nav__item">
-                  <a href="#home" class="nav__link active-link">Home</a>
-               </li>
+<section id="research" class="section">
+  <div class="wrap">
+    <h2 class="section-title">Research projects</h2>
 
-               <li class="nav__item">
-                  <a href="#about" class="nav__link">About Me</a>
-               </li>
-
-               <li class="nav__item">
-                  <a href="#projects" class="nav__link">Projects</a>
-               </li>
-
-               <li class="nav__item">
-                  <a href="#contact" class="nav__link nav__link-button">Contact Me</a>
-               </li>
-            </ul>
-
-            <!-- close button  -->
-            <div class="nav__close" id="nav-close">
-               <i class="ri-close-line"></i>
-            </div>
-            </div>
-
-            <div class="nav__buttons">
-
-               <!-----Theme button-->
-               <i class="ri-moon-line change-theme" id="theme-button"></i>
-
-               <!--Toggle button-->
-               <div class="nav__toggle" id="nav-toggle">
-                  <i class="ri-menu-4-line"></i>
-               </div>
-            </div>
-         </nav>
-
-
-      </header>
-
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!--==================== HOME ====================-->
-         <section class="home section" id="home">
-            <div class="home__container container grid">
-               <h1 class="home__name">
-                  Subarna Dahal
-               </h1>
-               
-               <div class="home__perfil">
-               <div class="home__image">
-                  <img src="assets/img/homeimg.jpg" alt="image" class="home__img">
-                  
-                  <div class="home__shadow"></div>
-                  <img src="assets/img/curved-arrow.svg" alt="arrow" class="home__arrow">
-                  <img src="assets/img/random-lines.svg" alt="line" class="home__line">
-                  <div class="geometric-box">
-                     
-                  </div>
-               </div>
-              <div class="home__social">
-               <a href="https://www.instagram.com/su3arna/" target="_blank" class="home__social-link">
-                  <i class="ri-instagram-line"></i>
-               </a>
-               <a href="https://www.linkedin.com/in/subarna-dahal-99a4b0156/" target="_blank" class="home__social-link">
-                  <i class="ri-linkedin-box-line"></i>
-               </a>
-               
-               <a href="https://github.com/subarna007" target="_blank" class="home__social-link">
-                  <i class="ri-github-line"></i>
-               </a>
-               
-
-              </div>
-
-               </div>
-
-               <div class="home__info">
-               <p class="home__description">
-                  <b>Frontend Developer</b>, with knowledge in web 
-               development and design, I offer the best 
-               projects resulting in quality work.
-               </p>
-               <a href="#about" class="home__scroll">
-                  <div class="home__scroll-box">
-                     <i class="ri-arrow-down-s-line"></i>
-                  </div>
-
-                  <span class="home__scroll-text">Scroll Down</span>
-               </a>
-
-               </div>
-            </div>
-
-         </section>
-
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
-            
-          <div class="about__container container grid">
-            <h2 class="section__title-1">
-              <span>About Me.</span> 
-            </h2>
-            <div class="about__perfil">
-               <div class="about__image">
-                  <img src="assets/img/IMG_4060.jpg" alt="image" class="about__img">
-                  <div class="about__shadow">  </div>
-
-                     <div class="geometric-box"></div>
-                <img src="assets/img/random-lines.svg" alt="" class="about__line">
-                <div class="about__box"></div>
-               </div>
-            </div>
-          
-            <div class="about__info">
-               <p class="about__description">
-                  Passionate about creating <b> front end Web Pages</b> with 
-             <b>React & html, css and js</b>, I also make full projects with 
-              <b>React & Node js</b>, I have done so many of projects
-              and many clients are happy with 
-              the projects i have made.
-
-               </p>
-               <ul class="about__list">
-                  <li class="about__item">
-                     <b>My Skills Are:</b> HTML, CSS, JavaScript, 
-                   React, Git & GitHub, Bootstrap, Node js & 
-                    Mongodb.
-
-                  </li>
-               </ul>
-            <div class="about__buttons">
-               <a href="#contact" class="button">
-                  <i class="ri-send-plane-line"></i>Contact Me
-               </a>
-
-               <a href="https://www.linkedin.com/in/subarna-dahal-99a4b0156/" target="_blank" class="button__ghost">
-                  <i class="ri-linkedin-box-line"></i>
-               </a>
-            </div>
-
-            </div>
-
-          </div>
-
-
-         </section>
-
-         <!--==================== SERVICES ====================-->
-         <section class="services section">
-            
-      <h2 class="section__title-2">
-         <span>Services.</span>
-      </h2>
-      <div class="services__container container grid">
-
-         <article class="services__card">
-            <div class="services__border"></div>
-
-            <div class="services__content">
-            <div class="services__icon">
-               <div class="services__box"></div>
-               <i class="ri-layout-4-line"></i>
-
-            </div>
-
-            <h2 class="services__title">Web Design</h2>
-            <p class="services__description">
-               Beautiful and elegant designs with 
-               interfaces that are intuitive, efficient 
-               and pleasant  to use for the user.
-            </p>
-            </div>
-         </article>
-
-         
-         <article class="services__card">
-            <div class="services__border"></div>
-
-            <div class="services__content">
-            <div class="services__icon">
-               <div class="services__box"></div>
-               <i class="ri-code-box-line"></i>
-            </div>
-
-            <h2 class="services__title">Development</h2>
-            <p class="services__description">
-               Custom web development tailored to your 
-               specifications, designed to provide a 
-               flawless user experience.
-               
-            </p>
-            </div>
-         </article>
-
-         
-         <article class="services__card">
-            <div class="services__border"></div>
-
-            <div class="services__content">
-            <div class="services__icon">
-               <div class="services__box"></div>
-               <i class="ri-smartphone-line"></i>
-            </div>
-
-            <h2 class="services__title">Responsive </h2>
-            <p class="services__description">
-               Design and transform website projects 
-               into mobile responsive to provide a seamless
-               user experience.
-            </p>
-            </div>
-         </article>
-
-          
-         <!-- <article class="services__card">
-            <div class="services__border"></div>
-
-            <div class="services__content">
-            <div class="services__icon">
-               <div class="services__box"></div>
-               <i class="ri-smartphone-line"></i>
-            </div>
-
-            <h2 class="services__title">Responsive </h2>
-            <p class="services__description">
-               Design and transform website projects 
-               into mobile responsive to provide a seamless
-               user experience.
-            </p>
-            </div>
-         </article> -->
-
-
+    <article class="study">
+      <div class="study-text">
+        <h3>Skin lesion classification on ISIC 2018</h3>
+        <p class="kicker">Computer vision for medical images, a follow-up to my MSc capstone</p>
+        <p>My capstone model (ResNet-50) reached 76.7% accuracy but found only 36% of melanomas, and it had been tested on a split where photos of the same lesion could appear in both training and test data. In this follow-up I rebuilt the evaluation first, then the model.</p>
+        <ul class="points">
+          <li>Split the 10,015 HAM10000 images by <em>lesion</em>, so no lesion is in both train and test.</li>
+          <li>Chose models on validation data only and scored the test set once, with 95% bootstrap confidence intervals.</li>
+          <li>Replaced ResNet-50 with ConvNeXt-Tiny at 384 px and class-balanced sampling.</li>
+          <li>Fixed a melanoma screening threshold on validation data for 90% sensitivity.</li>
+        </ul>
+        <table class="results">
+          <caption>Held-out test set, 1,508 images</caption>
+          <thead><tr><th scope="col">Model</th><th scope="col">Balanced accuracy</th><th scope="col">Macro AUC</th><th scope="col">Melanoma sensitivity</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">ResNet-50 baseline</th><td>0.713</td><td>0.932</td><td>62.2%</td></tr>
+            <tr><th scope="row">ConvNeXt-Tiny</th><td><b>0.767</b></td><td><b>0.966</b></td><td><b>82.1%</b></td></tr>
+          </tbody>
+        </table>
+        <p>With the screening threshold, the model flags <b>94.2% of test melanomas</b> at 75.5% specificity. The weak points are clear too: false alarms on benign moles and a drop on actinic keratosis (46 test images). A paper on this work is in preparation.</p>
+        <p class="links">
+          <a href="https://github.com/subarna007/skin-lesion-classification-isic2018">Code and full results</a>
+          <a href="#dermassist">See the web app</a>
+        </p>
       </div>
-    
-      
-         </section>
+      <figure class="study-fig">
+        <img src="img/skin-per-class.jpg" width="1400" height="626" loading="lazy" alt="Bar chart of sensitivity for each of the seven classes, comparing the ResNet-50 baseline with ConvNeXt-Tiny.">
+        <figcaption>Sensitivity per class, ResNet-50 baseline compared with ConvNeXt-Tiny.</figcaption>
+        <img src="img/skin-confusion.jpg" width="896" height="768" loading="lazy" alt="Confusion matrix of ConvNeXt-Tiny on the test set." class="narrow">
+        <figcaption>ConvNeXt-Tiny confusion matrix. The main error is nevi predicted as melanoma.</figcaption>
+      </figure>
+    </article>
 
-         <!--==================== PROJECTS ====================-->
-         <section class="projects section" id="projects">
-            
-           <h2 class="section__title-1">
-            <span>Projects.</span>
-           </h2>
+    <div class="app-shots" id="dermassist">
+      <h4>DermAssist: the web app around the model</h4>
+      <p>A FastAPI and JavaScript prototype that shows the seven-class probabilities, a Grad-CAM map, ABCD shape and colour measurements and the most similar cases from the training set, then suggests whether to see a dermatologist. The hospital in the demo is fictional. It needs a GPU or CPU server to run, so here are screenshots.</p>
+      <div class="shot-row">
+        <a href="img/web-home.jpg"><img src="img/web-home.jpg" width="1400" height="875" loading="lazy" alt="DermAssist home page"></a>
+        <a href="img/web-analyse.jpg"><img src="img/web-analyse.jpg" width="1400" height="875" loading="lazy" alt="DermAssist page for uploading an image to analyse"></a>
+        <a href="img/skin-abcd.jpg"><img src="img/skin-abcd.jpg" width="1200" height="879" loading="lazy" alt="ABCD measurements of a lesion: asymmetry, border, colour and diameter"></a>
+      </div>
+    </div>
 
-           <div class="projects__container container grid">
+    <article class="study study-flip">
+      <div class="study-text">
+        <h3>Fine-tuning vs. zero-shot LLMs for Nepali sentiment</h3>
+        <p class="kicker">NLP for a low-resource language, compared with large language models</p>
+        <p>Is it still worth fine-tuning a small model for a low-resource language, or can a general LLM do the job with no training? I compared three approaches on the same test set of Nepali COVID-19 tweets (33.5k tweets, three classes), after removing duplicate tweets so none could leak from training into test.</p>
+        <table class="results">
+          <caption>Test set, 3,346 tweets. Macro-F1 is the main metric because the classes are unbalanced.</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">Labelled examples</th><th scope="col">Macro-F1</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">TF-IDF + logistic regression</th><td>26,764</td><td>0.657</td></tr>
+            <tr><th scope="row">Qwen2.5-3B, zero-shot</th><td>0</td><td>0.480</td></tr>
+            <tr><th scope="row">Qwen2.5-3B, 2 examples per class</th><td>6</td><td>0.539</td></tr>
+            <tr><th scope="row">Fine-tuned XLM-RoBERTa</th><td>26,764</td><td><b>0.707</b></td></tr>
+          </tbody>
+        </table>
+        <p>Fine-tuning still wins clearly, and a simple character n-gram baseline beats the untrained LLM. The LLM's errors are biased, not random: zero-shot it calls 581 of 1,360 negative tweets positive. Neutral is hard for every method (F1 below 0.49), which points to ambiguous labels.</p>
+        <p class="links">
+          <a href="https://github.com/subarna007/nepali-sentiment-finetune-vs-llm">Code and full results</a>
+        </p>
+      </div>
+      <figure class="study-fig">
+        <img src="img/nepali-macro-f1.jpg" width="1400" height="597" loading="lazy" alt="Bar chart of macro-F1 for the four methods.">
+        <figcaption>Macro-F1 by method.</figcaption>
+        <img src="img/nepali-per-class.jpg" width="1400" height="626" loading="lazy" alt="Bar chart of F1 for negative, neutral and positive tweets for each method.">
+        <figcaption>F1 per class. Neutral tweets are the weak spot for all methods.</figcaption>
+      </figure>
+    </article>
+  </div>
+</section>
 
-            <article class="projects__card">
-               <div class="projects__image">
-                  <img src="assets/img/covid.png" alt="image" class="projects__img">
-                  <a href="https://subarna007.github.io/covidwebsite/" target="_blank" class="projects__button button">
-                     <i class="ri-arrow-right-up-line"></i>
-                  </a>
-               </div>
-             
-               <div class="projects__content">
-                  <h3 class="projects__subtitle">Website</h3>
-                  <h2 class="projects__title">Covid-19</h2>
-                  <p class="projects__description">
-                  Designed covid-19 website using HTML, CSS & JS.
-                  </p>
-               </div>
-              
-             <div class="projects__buttons">
-               <a href="https://github.com/Subarna007" target="_blank"   class="projects__link">
-                  <i class="ri-github-line"></i> View
-               </a>
-               <a href="https://subarna007.github.io/covidwebsite/" target="_blank"   class="projects__link">
-                  <i class="ri-macbook-line"></i> View
-               </a>
+<section id="projects" class="section section-alt">
+  <div class="wrap">
+    <h2 class="section-title">More projects</h2>
+    <p class="section-intro">Smaller projects from my courses and my own time. Each link opens the code; notebook links open a rendered copy of the notebook with all outputs.</p>
 
-             </div>
+    <h3 class="group">Machine learning and NLP</h3>
+    <ul class="proj-list">
+      <li>
+        <div class="proj-name">BBC tech search engine</div>
+        <p>Boolean retrieval with a query parser and BM25 ranking written from scratch, with a Streamlit interface that compares both result lists.</p>
+        <div class="proj-links"><a href="https://github.com/subarna007/ir-final-project">Code</a></div>
+      </li>
+      <li>
+        <div class="proj-name">BBC news topic classification</div>
+        <p>TF-IDF and logistic regression on 2,225 BBC articles: 97.3% accuracy on 334 test articles across five topics.</p>
+        <div class="proj-links"><a href="https://github.com/subarna007/textprocessing_nlp">Code</a><a href="https://nbviewer.org/github/subarna007/textprocessing_nlp/blob/main/Text%20Processing%20Regression.ipynb">Notebook</a></div>
+      </li>
+      <li>
+        <div class="proj-name">Twitter sentiment analysis</div>
+        <p>Three-class sentiment on 162,969 tweets (84.8% accuracy) and four-class sentiment on 73,995 tweets (61.6%).</p>
+        <div class="proj-links"><a href="https://github.com/subarna007/twitter_sentiment_analysis">Code</a></div>
+      </li>
+      <li>
+        <div class="proj-name">Mall customer segmentation</div>
+        <p>K-means on income and spending score; the elbow plot and silhouette score (0.555) both point to five customer groups.</p>
+        <div class="proj-links"><a href="https://github.com/subarna007/k-mean-clustering">Code</a><a href="https://nbviewer.org/github/subarna007/k-mean-clustering/blob/main/mall-customer-segmentation-k-mean-clustering.ipynb">Notebook</a></div>
+      </li>
+      <li>
+        <div class="proj-name">Medical insurance cost prediction</div>
+        <p>Linear and degree-2 polynomial regression on 1,338 people; the polynomial model reaches test R² 0.852 by capturing smoking × BMI effects.</p>
+        <div class="proj-links"><a href="https://github.com/subarna007/insurancemodel">Code</a><a href="https://nbviewer.org/github/subarna007/insurancemodel/blob/main/Insurance%20Regression%20Model.ipynb">Notebook</a></div>
+      </li>
+      <li>
+        <div class="proj-name">Clinical prediction on tabular data</div>
+        <p>Diabetes (Pima dataset), heart failure and loan eligibility models, with notes on class imbalance, sensitivity and a feature that leaks the outcome.</p>
+        <div class="proj-links"><a href="https://github.com/subarna007/diabetes-prediction-model">Diabetes</a><a href="https://github.com/subarna007/heart_failure-model">Heart failure</a><a href="https://github.com/subarna007/loan-prediction-model">Loan</a></div>
+      </li>
+    </ul>
 
-            </article>
+    <h3 class="group">Applications</h3>
+    <div class="apps">
+      <article class="app">
+        <img src="img/inventory.jpg" width="1200" height="675" loading="lazy" alt="Smart inventory dashboard with a sales chart">
+        <div>
+          <h4>Smart inventory forecast</h4>
+          <p>Upload a sales CSV and get a Prophet demand forecast, a stock status for each product and a reorder suggestion. FastAPI back end, React and Chart.js front end, Docker Compose.</p>
+          <div class="proj-links"><a href="https://github.com/subarna007/smart-inventory-forecast">Code</a></div>
+        </div>
+      </article>
+      <article class="app">
+        <img src="img/fpl.jpg" width="1200" height="675" loading="lazy" alt="Fantasy Premier League dashboard showing a squad on a pitch">
+        <div>
+          <h4>Fantasy Premier League dashboard</h4>
+          <p>Enter an FPL team ID to see the squad on a pitch, fixture difficulty and expected points from a hand-built projection. Next.js and TypeScript, with server routes that call the public FPL API.</p>
+          <div class="proj-links"><a href="https://github.com/subarna007/fpl-helper">Code</a></div>
+        </div>
+      </article>
+    </div>
+    <ul class="proj-list compact">
+      <li>
+        <div class="proj-name">All in One Hotel</div>
+        <p>My BSc final-year project: hotel, package, adventure and food booking with admin, vendor and guest dashboards. PHP and MySQL.</p>
+        <div class="proj-links"><a href="https://github.com/subarna007/7sem-project">Code</a></div>
+      </li>
+      <li>
+        <div class="proj-name">Diabetes prediction web app</div>
+        <p>Streamlit app serving a logistic regression model trained on the Pima dataset.</p>
+        <div class="proj-links"><a href="https://github.com/subarna007/streamlitprojects">Code</a></div>
+      </li>
+      <li>
+        <div class="proj-name">Footwear store with admin dashboard</div>
+        <p>React, TypeScript and Tailwind front end made for my Management Information Systems course.</p>
+        <div class="proj-links"><a href="https://github.com/subarna007/mis_project">Code</a></div>
+      </li>
+    </ul>
+  </div>
+</section>
 
-            <article class="projects__card">
-               <div class="projects__image">
-                  <img src="assets/img/hotel.png" alt="image" class="projects__img">
-                  <a href="https://subarna007.github.io/hotelwebsite/" target="_blank" class="projects__button button">
-                     <i class="ri-arrow-right-up-line"></i>
-                  </a>
-               </div>
-             
-               <div class="projects__content">
-                  <h3 class="projects__subtitle">Website</h3>
-                  <h2 class="projects__title">All in one Hotel</h2>
-                  <p class="projects__description">
-                     Designed Hotel website using HTML, CSS & JS.
-                  </p>
-               </div>
-              
-             <div class="projects__buttons">
-               <a href="https://github.com/Subarna007" target="_blank"   class="projects__link">
-                  <i class="ri-github-line"></i> View
-               </a>
-               <a href="https://subarna007.github.io/hotelwebsite/" target="_blank"   class="projects__link">
-                  <i class="ri-macbook-line"></i> View
-               </a>
+<section id="try" class="section">
+  <div class="wrap">
+    <h2 class="section-title">Try them in your browser</h2>
+    <p class="section-intro">Small JavaScript projects from when I was learning web development. They run right here; nothing to install.</p>
+    <div class="demo-grid">
+      <a class="demo" href="demos/chessgame/"><img src="img/demo-chessgame.jpg" width="640" height="400" loading="lazy" alt=""><span>Chess against the computer</span></a>
+      <a class="demo" href="demos/wordle/"><img src="img/demo-wordle.jpg" width="640" height="400" loading="lazy" alt=""><span>Wordle</span></a>
+      <a class="demo" href="demos/snakegame/"><img src="img/demo-snakegame.jpg" width="640" height="400" loading="lazy" alt=""><span>Snake</span></a>
+      <a class="demo" href="demos/breakout-game/"><img src="img/demo-breakout-game.jpg" width="640" height="400" loading="lazy" alt=""><span>Breakout</span></a>
+      <a class="demo" href="demos/typetest/"><img src="img/demo-typetest.jpg" width="640" height="400" loading="lazy" alt=""><span>Typing speed test</span></a>
+      <a class="demo" href="demos/translatorapp/"><img src="img/demo-translatorapp.jpg" width="640" height="400" loading="lazy" alt=""><span>Translator</span></a>
+      <a class="demo" href="demos/text-speechapp/"><img src="img/demo-text-speechapp.jpg" width="640" height="400" loading="lazy" alt=""><span>Text to speech</span></a>
+      <a class="demo" href="demos/qrcodegenerator/"><img src="img/demo-qrcodegenerator.jpg" width="640" height="400" loading="lazy" alt=""><span>QR code generator</span></a>
+      <a class="demo" href="demos/texteditor/"><img src="img/demo-texteditor.jpg" width="640" height="400" loading="lazy" alt=""><span>Rich text editor</span></a>
+      <a class="demo" href="demos/tictaktoe/"><img src="img/demo-tictaktoe.jpg" width="640" height="400" loading="lazy" alt=""><span>Tic Tac Toe</span></a>
+      <a class="demo" href="demos/alarmclock/"><img src="img/demo-alarmclock.jpg" width="640" height="400" loading="lazy" alt=""><span>Alarm clock</span></a>
+      <a class="demo" href="demos/spinwheel/"><img src="img/demo-spinwheel.jpg" width="640" height="400" loading="lazy" alt=""><span>Spin wheel</span></a>
+    </div>
+  </div>
+</section>
 
-             </div>
+<section id="about" class="section section-alt">
+  <div class="wrap about-grid">
+    <div>
+      <h2 class="section-title">About</h2>
+      <p>I live in Lalitpur, Nepal. I studied computer science, then worked as a junior IT officer and taught computer science at a school before doing my master's in AI and machine learning.</p>
+      <p>My capstone taught me that a good accuracy number can hide a model that misses the cases that matter. Since then I spend as much effort on how a model is tested as on the model itself. For my PhD I would like to work on medical image analysis or NLP, especially for languages and settings with little data.</p>
+    </div>
+    <div>
+      <h3 class="group">Education</h3>
+      <ol class="timeline">
+        <li><span class="when">2024–2026</span><div><b>MSc in Information Technology</b> (Artificial Intelligence and Machine Learning), Presidential Graduate School, Kathmandu, affiliated to Westcliff University. GPA 4.0.</div></li>
+        <li><span class="when">2017–2021</span><div><b>BSc in Computer Science and Information Technology</b>, Kathford International College of Engineering and Management.</div></li>
+      </ol>
+      <h3 class="group">Work</h3>
+      <ol class="timeline">
+        <li><span class="when">2024–2025</span><div>Computer Science Teacher, Little Wonders School</div></li>
+        <li><span class="when">2024</span><div>Python with Data Science trainee, Broadway Infosys</div></li>
+        <li><span class="when">2022–2023</span><div>Junior IT Officer, Brainworks Investment</div></li>
+      </ol>
+      <h3 class="group">Skills</h3>
+      <p class="skills"><b>Machine learning:</b> PyTorch, timm, Hugging Face Transformers, scikit-learn, Grad-CAM, bootstrap confidence intervals, grouped data splits.<br><b>Programming and data:</b> Python, NumPy, pandas, SQL, Matplotlib, Seaborn, Tableau.<br><b>Tools:</b> Git, Jupyter, Kaggle GPUs, FastAPI, Streamlit, Docker.</p>
+    </div>
+  </div>
+</section>
 
-            </article>
+</main>
 
-            <article class="projects__card">
-               <div class="projects__image">
-                  <img src="assets/img/css.png" alt="image" class="projects__img">
-                  <a href="https://subarna007.github.io/3D--SliderCSS/" target="_blank" class="projects__button button">
-                     <i class="ri-arrow-right-up-line"></i>
-                  </a>
-               </div>
-             
-               <div class="projects__content">
-                  <h3 class="projects__subtitle">Website</h3>
-                  <h2 class="projects__title">CSS 3D- Slider</h2>
-                  <p class="projects__description">
-                     Designed Slider using CSS Only.
-                  </p>
-               </div>
-              
-             <div class="projects__buttons">
-               <a href="https://github.com/Subarna007" target="_blank"   class="projects__link">
-                  <i class="ri-github-line"></i> View
-               </a>
-               <a href="https://subarna007.github.io/3D--SliderCSS/" target="_blank"   class="projects__link">
-                  <i class="ri-macbook-line"></i> View
-               </a>
-
-             </div>
-
-            </article>
-
-            <article class="projects__card">
-               <div class="projects__image">
-                  <img src="assets/img/voltii.png" alt="image" class="projects__img">
-                  <a href="
-                  https://subarna007.github.io/Voltii/" target="_blank" class="projects__button button">
-                     <i class="ri-arrow-right-up-line"></i>
-                  </a>
-               </div>
-             
-               <div class="projects__content">
-                  <h3 class="projects__subtitle">Website</h3>
-                  <h2 class="projects__title">Volti</h2>
-                  <p class="projects__description">
-                    Designed Electric charging port websites for electric vehicles.
-                  </p>
-               </div>
-              
-             <div class="projects__buttons">
-               <a href="https://github.com/Subarna007" target="_blank"   class="projects__link">
-                  <i class="ri-github-line"></i> View
-               </a>
-               <a href="
-               https://subarna007.github.io/Voltii/" target="_blank"   class="projects__link">
-                  <i class="ri-macbook-line"></i> View
-               </a>
-
-             </div>
-
-            </article>
-
-            <article class="projects__card">
-               <div class="projects__image">
-                  <img src="assets/img/autofix.png" alt="image" class="projects__img">
-                  <a href="https://subarna007.github.io/Autofix/" target="_blank" class="projects__button button">
-                     <i class="ri-arrow-right-up-line"></i>
-                  </a>
-               </div>
-             
-               <div class="projects__content">
-                  <h3 class="projects__subtitle">Website</h3>
-                  <h2 class="projects__title">AutoFix</h2>
-                  <p class="projects__description">
-                     Designed car repair website using Html, Css and Js.
-                  </p>
-               </div>
-              
-             <div class="projects__buttons">
-               <a href="https://github.com/Subarna007" target="_blank"   class="projects__link">
-                  <i class="ri-github-line"></i> View
-               </a>
-               <a href="https://subarna007.github.io/Autofix/" target="_blank"   class="projects__link">
-                  <i class="ri-macbook-line"></i> View
-               </a>
-
-             </div>
-
-            </article>
-
-            <article class="projects__card">
-               <div class="projects__image">
-                  <img src="assets/img/snake.png" alt="image" class="projects__img">
-                  <a href="https://subarna007.github.io/snakegame/" target="_blank" class="projects__button button">
-                     <i class="ri-arrow-right-up-line"></i>
-                  </a>
-               </div>
-             
-               <div class="projects__content">
-                  <h3 class="projects__subtitle">Game</h3>
-                  <h2 class="projects__title">Snake game</h2>
-                  <p class="projects__description">
-                     Designed snake game with Html,Css and Js.
-                  </p>
-               </div>
-              
-             <div class="projects__buttons">
-               <a href="https://github.com/Subarna007" target="_blank"   class="projects__link">
-                  <i class="ri-github-line"></i> View
-               </a>
-               <a href="https://subarna007.github.io/snakegame/" target="_blank"   class="projects__link">
-                  <i class="ri-macbook-line"></i>View
-               </a>
-
-             </div>
-
-            </article>
-
-
-           </div>
-
-
-
-
-         </section>
-
-         <!--==================== CONTACT ====================-->
-         <section class="contact section" id="contact">
-            <div class="contact__container grid">
-               <div class="contact__data">
-               <h2 class="section__title-2">
-                  <span>Contact Me.</span>
-               </h2>
-               <p class="contact__description-1">
-                  I will read all emails. Send me any 
-                  message you want and I'll get back to you.
-               </p>
-
-               <p class="contact__description-2">
-                  I need your <b>Name</b> and <b>Email Address</b>, but 
-                  you won't receive anything other than your reply.
-                  
-               </p>
-               
-               <div class="geometric-box"></div>
-               </div>
-
-               <div class="contact__mail">
-                  <h2 class="contact__title">
-                     Send Me A Message 
-                  </h2>
-
-                 <form action="" class="contact__form" id="contact-form">
-                  <div class="contact__group">
-
-                     <div class="contact__box">
-                        <input type="text" name="user_name" class="contact__input" id="name" required placeholder="Name ">
-                        <label for="name" class="contact__label"> Name </label>
-                     </div>
-                     
-                     <div class="contact__box">
-                        <input type="text" name="user_email" class="contact__input" id="email" required placeholder="Email Address">
-                        <label for="email" class="contact__label">Email Address</label>
-                     </div>
-
-                     <div class="contact__box">
-                        <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subject">
-                        <label for="subject" class="contact__label">Subject</label>
-                     </div>
-
-                     <div class="contact__box contact__area">
-                        <textarea name="user_message" id="message" class="contact__input" required placeholder="Message"></textarea>
-                        <label for="message" class="contact__label">Message</label>
-                     </div>
-                    
-                      <p class="contact__message" id="contact-message"> </p>
-
-
-
-                  </div>
-
-                    <button type="submit" class="contact__button button">
-                     <i class="ri-send-plane-line"></i> Send Message
-
-                    </button>
-
-                 </form>
-
-               </div>
-
-               <div class="contact__social">
-                   <img src="assets/img/curved-arrow.svg" alt="" class="contact__social-arrow">
-
-                   <div class="contact__social-data">
-                     <div>
-
-                        <p class="contact__social-description-1">
-                           Does not send emails
-                        </p>
-                       
-                         
-                        <p class="contact__social-description-2">
-                           Write me on my social networks
-                        </p>
-
-
-                     </div>
-                     
-                     <div class="contact__social-links">
-                        <a href="https://m.facebook.com/subarna.zayn/" target="_blank" class="contact__social-link">
-                           <i class="ri-facebook-circle-line"></i>
-                        </a>
-
-                        <a href="https://www.instagram.com/su3arna/" target="_blank" class="contact__social-link">
-                           <i class="ri-instagram-line"></i>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/subarna-dahal-99a4b0156/" target="_blank" class="contact__social-link">
-                           <i class="ri-linkedin-box-line"></i>
-                        </a>
-
-                     </div>
-
-                   </div>
-
-               </div>
-            </div>
-
-
-         </section>
-      </main>
-
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         
-         <div class="footer__container container grid">
-            <ul class="footer__links">
-               <li>
-                  <a href="#home" class="footer__link">Home </a>
-               </li>
-      
-               <li>
-                  <a href="#about" class="footer__link">About </a>
-               </li>
-
-               <li>
-                  <a href="#projects" class="footer__link">Projects</a>
-               </li>
-
-            </ul>
-            <span class="footer__copy">
-               &#169;subarnadahal
-          <b> Kathmandu, Nepal</b>
-            </span>
-         </div>
-
-
-
-      </footer>
-
-      <!--========== SCROLL UP ==========-->
-      
-         
-      <a href="" class="scrollup" id="scroll-up">
-         <i class="ri-arrow-up-s-line"></i>
-      </a>
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src="assets/js/scrollreveal.min.js"></script>
-      
-      <!--=============== EMAIL JS ===============-->
-      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
+<footer class="site-footer" id="contact">
+  <div class="wrap footer-row">
+    <div>
+      <p class="footer-big">Let's talk about a PhD project.</p>
+      <p class="footer-links"><a href="mailto:dahalsubarna9@gmail.com">dahalsubarna9@gmail.com</a><a href="https://github.com/subarna007">github.com/subarna007</a></p>
+    </div>
+    <p class="small">Lalitpur, Nepal</p>
+  </div>
+</footer>
+</body>
 </html>

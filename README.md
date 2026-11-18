@@ -1,21 +1,8 @@
-# Personal Website
+# subarna007.github.io/personalwebsite
 
-A second version of my portfolio website, listing my front-end projects.
+Source of my personal website: research projects, other projects, small browser demos and my background.
 
-## Features
+Plain HTML and CSS, no build step. `index.html` and `style.css` are the site, `img/` holds the figures
+and screenshots, and `demos/` contains copies of my JavaScript projects so they can be played on the site.
 
-- About, skills and projects sections
-- Links to the project repositories
-- Responsive layout
-
-## Run it
-
-No build step. Open `index.html` in a browser, or serve the folder with any static server, for example `python -m http.server`.
-
-## Credits
-
-Layout based on a Bedimcode portfolio tutorial.
-
-## Screenshots
-
-![Personal Website screenshot](preview.png)
+Live site: https://subarna007.github.io/personalwebsite/
