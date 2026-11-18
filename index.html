@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Subarna Dahal: medical imaging and Nepali NLP</title>
-<meta name="description" content="Subarna Dahal, MSc IT (AI and ML) graduate from Nepal. Deep learning for skin lesion images and NLP for Nepali, evaluated carefully. Looking for a PhD position starting in 2027.">
+<title>Subarna Dahal: computer vision and Nepali NLP research</title>
+<meta name="description" content="Subarna Dahal, MSc IT (AI and ML) graduate from Nepal. Research on glacial lake mapping from satellite images, skin lesion classification and Nepali NLP, with papers and code. Looking for a PhD position starting in 2027.">
 <meta property="og:title" content="Subarna Dahal: medical imaging and Nepali NLP">
 <meta property="og:description" content="Research projects, results and code by Subarna Dahal.">
 <meta property="og:image" content="img/gradcam-strip.jpg">
@@ -21,9 +21,9 @@
   <div class="wrap header-row">
     <a class="brand" href="#top">Subarna Dahal</a>
     <nav aria-label="Main">
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#try">Try them</a>
+      <a href="#glacial">Glacial lakes</a>
+      <a href="#skin">Skin lesions</a>
+      <a href="#nepali">Nepali NLP</a>
       <a href="#about">About</a>
       <a class="nav-contact" href="mailto:dahalsubarna9@gmail.com">Contact</a>
     </nav>
@@ -36,7 +36,7 @@
   <div class="wrap hero-grid">
     <div>
       <h1>Subarna Dahal</h1>
-      <p class="lede">I train deep-learning models for <strong>medical images</strong> and for <strong>Nepali-language text</strong>, and I care most about testing them honestly: no data leakage, metrics that match how the model would be used, and results others can reproduce.</p>
+      <p class="lede">I build deep-learning models for <strong>satellite and medical images</strong> and for <strong>Nepali-language text</strong>, and I care most about testing them honestly: no data leakage, metrics that match how the model would be used, and results others can reproduce.</p>
       <p class="status">MSc in IT (Artificial Intelligence and Machine Learning), Lalitpur, Nepal.<br>Looking for a <strong>PhD position starting in 2027</strong> in computer vision, NLP or medical AI.</p>
       <p class="actions">
         <a class="btn btn-solid" href="mailto:dahalsubarna9@gmail.com">Email me</a>
@@ -44,8 +44,8 @@
       </p>
     </div>
     <dl class="facts">
-      <div><dt>Research interests</dt><dd>Medical image analysis, explainability, low-resource NLP, LLM evaluation</dd></div>
-      <div><dt>Main tools</dt><dd>PyTorch, timm, Hugging Face Transformers, scikit-learn</dd></div>
+      <div><dt>Research interests</dt><dd>Computer vision for medical and satellite images, low-resource NLP, LLM evaluation</dd></div>
+      <div><dt>Main tools</dt><dd>PyTorch, timm, Hugging Face Transformers, scikit-learn, Sentinel-2 and STAC</dd></div>
       <div><dt>Languages</dt><dd>English, Nepali, Hindi</dd></div>
     </dl>
   </div>
@@ -57,18 +57,52 @@
 
 <section id="research" class="section">
   <div class="wrap">
-    <h2 class="section-title">Research projects</h2>
+    <h2 class="section-title">Research</h2>
+    <p class="section-intro">Three projects, each written up as a short paper: why I did it, what I did, what I found and what is still open. Every number comes from code you can run yourself.</p>
 
-    <article class="study">
+    <article class="study" id="glacial">
       <div class="study-text">
-        <h3>Skin lesion classification on ISIC 2018</h3>
+        <h3>Mapping glacial lakes in the Himalaya with Sentinel-2</h3>
+        <p class="kicker">Computer vision for satellite images, with a case study of the 2025 and 2026 Bhotekoshi floods</p>
+        <p>Floods came down the Lende river into the Bhotekoshi at Rasuwagadhi on 8 July 2025 and again on 26 August 2026, both with almost no warning. I trained a U-Net to find glacial lakes in free Sentinel-2 images, tested it on parts of the Himalaya it never saw, and then pointed it at the valley that flooded.</p>
+        <ul class="points">
+          <li>Labels from the hand-checked Hi-MAG inventory; training, validation and test tiles from separate longitude strips.</li>
+          <li>Compared with NDWI and MNDWI thresholds tuned on the same training data.</li>
+          <li>Followed every lake above Rasuwagadhi from 2017 to 2024, and checked each clear image around both floods.</li>
+        </ul>
+        <table class="results">
+          <caption>Held-out test strips: 160 tiles, 1,049 km², 170 lakes</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">Pixel IoU (95% CI)</th><th scope="col">Lakes found</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">NDWI threshold</th><td>0.490 (0.41–0.57)</td><td>45.9%</td></tr>
+            <tr><th scope="row">MNDWI threshold</th><td>0.039 (0.02–0.08)</td><td>8.2%</td></tr>
+            <tr><th scope="row">U-Net (ResNet-34)</th><td><b>0.669</b> (0.58–0.74)</td><td><b>70.6%</b></td></tr>
+          </tbody>
+        </table>
+        <p>In the flood area the model gives stable outlines for the large lakes over eight years and finds one lake that grew every year, from 0.43 to 0.73 km². The main lesson is about clouds, not the classifier: there was <b>no clear optical image for seven weeks around the 2026 flood</b>, so warnings will need radar.</p>
+        <p class="paper-links">
+          <a class="btn btn-solid" href="papers/Dahal_2026_glacial_lake_mapping.pdf" target="_blank" rel="noopener">Read the paper</a>
+          <a class="btn" href="papers/Dahal_2026_glacial_lake_mapping.pdf" download>Download PDF</a>
+          <a class="btn" href="https://github.com/subarna007/glacial-lake-mapping-sentinel2">Code and results</a>
+        </p>
+      </div>
+      <figure class="study-fig">
+        <img src="img/glacial-lende.jpg" width="1500" height="730" loading="lazy" alt="Map of the Lende and upper Bhotekoshi area with three lakes marked, total lake area per year from 2017 to 2024, and area of the three marked lakes.">
+        <figcaption>The Lende and upper Bhotekoshi area: total lake area per autumn and three lakes that changed.</figcaption>
+        <img src="img/glacial-size.jpg" width="1200" height="617" loading="lazy" alt="Bar chart of the share of test lakes found by NDWI, MNDWI and the U-Net in three size classes.">
+        <figcaption>Share of test lakes found, by size. The U-Net's gain is largest for lakes of 0.02–0.1 km².</figcaption>
+      </figure>
+    </article>
+
+    <article class="study study-flip" id="skin">
+      <div class="study-text">
+        <h3>Skin lesion classification with honest evaluation</h3>
         <p class="kicker">Computer vision for medical images, a follow-up to my MSc capstone</p>
         <p>My capstone model (ResNet-50) reached 76.7% accuracy but found only 36% of melanomas, and it had been tested on a split where photos of the same lesion could appear in both training and test data. In this follow-up I rebuilt the evaluation first, then the model.</p>
         <ul class="points">
           <li>Split the 10,015 HAM10000 images by <em>lesion</em>, so no lesion is in both train and test.</li>
           <li>Chose models on validation data only and scored the test set once, with 95% bootstrap confidence intervals.</li>
-          <li>Replaced ResNet-50 with ConvNeXt-Tiny at 384 px and class-balanced sampling.</li>
-          <li>Fixed a melanoma screening threshold on validation data for 90% sensitivity.</li>
+          <li>Replaced ResNet-50 with ConvNeXt-Tiny at 384 px and class-balanced sampling, and fixed a melanoma screening threshold on validation data.</li>
         </ul>
         <table class="results">
           <caption>Held-out test set, 1,508 images</caption>
@@ -78,48 +112,44 @@
             <tr><th scope="row">ConvNeXt-Tiny</th><td><b>0.767</b></td><td><b>0.966</b></td><td><b>82.1%</b></td></tr>
           </tbody>
         </table>
-        <p>With the screening threshold, the model flags <b>94.2% of test melanomas</b> at 75.5% specificity. The weak points are clear too: false alarms on benign moles and a drop on actinic keratosis (46 test images). A paper on this work is in preparation.</p>
-        <p class="links">
-          <a href="https://github.com/subarna007/skin-lesion-classification-isic2018">Code and full results</a>
-          <a href="#dermassist">See the web app</a>
+        <p>With the screening threshold the model flags <b>94.2% of test melanomas</b> at 75.5% specificity. The weak points are false alarms on benign moles and a drop on actinic keratosis. I also built DermAssist, a prototype web app around the model with Grad-CAM, ABCD measurements and similar cases.</p>
+        <p class="paper-links">
+          <a class="btn btn-solid" href="papers/Dahal_2026_skin_lesion_classification.pdf" target="_blank" rel="noopener">Read the paper</a>
+          <a class="btn" href="papers/Dahal_2026_skin_lesion_classification.pdf" download>Download PDF</a>
+          <a class="btn" href="https://github.com/subarna007/skin-lesion-classification-isic2018">Code and results</a>
         </p>
       </div>
       <figure class="study-fig">
         <img src="img/skin-per-class.jpg" width="1400" height="626" loading="lazy" alt="Bar chart of sensitivity for each of the seven classes, comparing the ResNet-50 baseline with ConvNeXt-Tiny.">
         <figcaption>Sensitivity per class, ResNet-50 baseline compared with ConvNeXt-Tiny.</figcaption>
-        <img src="img/skin-confusion.jpg" width="896" height="768" loading="lazy" alt="Confusion matrix of ConvNeXt-Tiny on the test set." class="narrow">
-        <figcaption>ConvNeXt-Tiny confusion matrix. The main error is nevi predicted as melanoma.</figcaption>
+        <div class="shot-row two">
+          <a href="img/web-analyse.jpg"><img src="img/web-analyse.jpg" width="1400" height="875" loading="lazy" alt="DermAssist page for uploading an image to analyse"></a>
+          <a href="img/skin-abcd.jpg"><img src="img/skin-abcd.jpg" width="1200" height="879" loading="lazy" alt="ABCD measurements of a lesion: asymmetry, border, colour and diameter"></a>
+        </div>
+        <figcaption>DermAssist, the prototype web app: image upload and ABCD measurements.</figcaption>
       </figure>
     </article>
 
-    <div class="app-shots" id="dermassist">
-      <h4>DermAssist: the web app around the model</h4>
-      <p>A FastAPI and JavaScript prototype that shows the seven-class probabilities, a Grad-CAM map, ABCD shape and colour measurements and the most similar cases from the training set, then suggests whether to see a dermatologist. The hospital in the demo is fictional. It needs a GPU or CPU server to run, so here are screenshots.</p>
-      <div class="shot-row">
-        <a href="img/web-home.jpg"><img src="img/web-home.jpg" width="1400" height="875" loading="lazy" alt="DermAssist home page"></a>
-        <a href="img/web-analyse.jpg"><img src="img/web-analyse.jpg" width="1400" height="875" loading="lazy" alt="DermAssist page for uploading an image to analyse"></a>
-        <a href="img/skin-abcd.jpg"><img src="img/skin-abcd.jpg" width="1200" height="879" loading="lazy" alt="ABCD measurements of a lesion: asymmetry, border, colour and diameter"></a>
-      </div>
-    </div>
-
-    <article class="study study-flip">
+    <article class="study" id="nepali">
       <div class="study-text">
-        <h3>Fine-tuning vs. zero-shot LLMs for Nepali sentiment</h3>
+        <h3>Is fine-tuning still worth it for Nepali?</h3>
         <p class="kicker">NLP for a low-resource language, compared with large language models</p>
-        <p>Is it still worth fine-tuning a small model for a low-resource language, or can a general LLM do the job with no training? I compared three approaches on the same test set of Nepali COVID-19 tweets (33.5k tweets, three classes), after removing duplicate tweets so none could leak from training into test.</p>
+        <p>Can a general LLM classify Nepali text with no training, or is it still worth collecting labels and fine-tuning a model? I compared four approaches on the same test set of Nepali COVID-19 tweets, after removing duplicate tweets so none could leak from training into test.</p>
         <table class="results">
-          <caption>Test set, 3,346 tweets. Macro-F1 is the main metric because the classes are unbalanced.</caption>
-          <thead><tr><th scope="col">Method</th><th scope="col">Labelled examples</th><th scope="col">Macro-F1</th></tr></thead>
+          <caption>Test set, 3,346 tweets. Macro-F1 with 95% bootstrap intervals.</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">Labels used</th><th scope="col">Macro-F1</th></tr></thead>
           <tbody>
-            <tr><th scope="row">TF-IDF + logistic regression</th><td>26,764</td><td>0.657</td></tr>
-            <tr><th scope="row">Qwen2.5-3B, zero-shot</th><td>0</td><td>0.480</td></tr>
-            <tr><th scope="row">Qwen2.5-3B, 2 examples per class</th><td>6</td><td>0.539</td></tr>
-            <tr><th scope="row">Fine-tuned XLM-RoBERTa</th><td>26,764</td><td><b>0.707</b></td></tr>
+            <tr><th scope="row">TF-IDF + logistic regression</th><td>26,764</td><td>0.657 (0.64–0.68)</td></tr>
+            <tr><th scope="row">Qwen2.5-3B, zero-shot</th><td>0</td><td>0.480 (0.46–0.50)</td></tr>
+            <tr><th scope="row">Qwen2.5-3B, 2 examples per class</th><td>6</td><td>0.539 (0.52–0.56)</td></tr>
+            <tr><th scope="row">Fine-tuned XLM-RoBERTa</th><td>26,764</td><td><b>0.707</b> (0.69–0.73)</td></tr>
           </tbody>
         </table>
-        <p>Fine-tuning still wins clearly, and a simple character n-gram baseline beats the untrained LLM. The LLM's errors are biased, not random: zero-shot it calls 581 of 1,360 negative tweets positive. Neutral is hard for every method (F1 below 0.49), which points to ambiguous labels.</p>
-        <p class="links">
-          <a href="https://github.com/subarna007/nepali-sentiment-finetune-vs-llm">Code and full results</a>
+        <p>Fine-tuning wins clearly, and even a character n-gram model beats the untrained LLM. The LLM's errors are biased, not random: zero-shot it calls 581 of 1,360 negative tweets positive, and six examples flip the bias the other way. Neutral tweets are hard for every method.</p>
+        <p class="paper-links">
+          <a class="btn btn-solid" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" target="_blank" rel="noopener">Read the paper</a>
+          <a class="btn" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" download>Download PDF</a>
+          <a class="btn" href="https://github.com/subarna007/Nepali-Sentiment-finetune-vs-llm">Code and results</a>
         </p>
       </div>
       <figure class="study-fig">
@@ -132,111 +162,12 @@
   </div>
 </section>
 
-<section id="projects" class="section section-alt">
-  <div class="wrap">
-    <h2 class="section-title">More projects</h2>
-    <p class="section-intro">Smaller projects from my courses and my own time. Each link opens the code; notebook links open a rendered copy of the notebook with all outputs.</p>
-
-    <h3 class="group">Machine learning and NLP</h3>
-    <ul class="proj-list">
-      <li>
-        <div class="proj-name">BBC tech search engine</div>
-        <p>Boolean retrieval with a query parser and BM25 ranking written from scratch, with a Streamlit interface that compares both result lists.</p>
-        <div class="proj-links"><a href="https://github.com/subarna007/ir-final-project">Code</a></div>
-      </li>
-      <li>
-        <div class="proj-name">BBC news topic classification</div>
-        <p>TF-IDF and logistic regression on 2,225 BBC articles: 97.3% accuracy on 334 test articles across five topics.</p>
-        <div class="proj-links"><a href="https://github.com/subarna007/textprocessing_nlp">Code</a><a href="https://nbviewer.org/github/subarna007/textprocessing_nlp/blob/main/Text%20Processing%20Regression.ipynb">Notebook</a></div>
-      </li>
-      <li>
-        <div class="proj-name">Twitter sentiment analysis</div>
-        <p>Three-class sentiment on 162,969 tweets (84.8% accuracy) and four-class sentiment on 73,995 tweets (61.6%).</p>
-        <div class="proj-links"><a href="https://github.com/subarna007/twitter_sentiment_analysis">Code</a></div>
-      </li>
-      <li>
-        <div class="proj-name">Mall customer segmentation</div>
-        <p>K-means on income and spending score; the elbow plot and silhouette score (0.555) both point to five customer groups.</p>
-        <div class="proj-links"><a href="https://github.com/subarna007/k-mean-clustering">Code</a><a href="https://nbviewer.org/github/subarna007/k-mean-clustering/blob/main/mall-customer-segmentation-k-mean-clustering.ipynb">Notebook</a></div>
-      </li>
-      <li>
-        <div class="proj-name">Medical insurance cost prediction</div>
-        <p>Linear and degree-2 polynomial regression on 1,338 people; the polynomial model reaches test R² 0.852 by capturing smoking × BMI effects.</p>
-        <div class="proj-links"><a href="https://github.com/subarna007/insurancemodel">Code</a><a href="https://nbviewer.org/github/subarna007/insurancemodel/blob/main/Insurance%20Regression%20Model.ipynb">Notebook</a></div>
-      </li>
-      <li>
-        <div class="proj-name">Clinical prediction on tabular data</div>
-        <p>Diabetes (Pima dataset), heart failure and loan eligibility models, with notes on class imbalance, sensitivity and a feature that leaks the outcome.</p>
-        <div class="proj-links"><a href="https://github.com/subarna007/diabetes-prediction-model">Diabetes</a><a href="https://github.com/subarna007/heart_failure-model">Heart failure</a><a href="https://github.com/subarna007/loan-prediction-model">Loan</a></div>
-      </li>
-    </ul>
-
-    <h3 class="group">Applications</h3>
-    <div class="apps">
-      <article class="app">
-        <img src="img/inventory.jpg" width="1200" height="675" loading="lazy" alt="Smart inventory dashboard with a sales chart">
-        <div>
-          <h4>Smart inventory forecast</h4>
-          <p>Upload a sales CSV and get a Prophet demand forecast, a stock status for each product and a reorder suggestion. FastAPI back end, React and Chart.js front end, Docker Compose.</p>
-          <div class="proj-links"><a href="https://github.com/subarna007/smart-inventory-forecast">Code</a></div>
-        </div>
-      </article>
-      <article class="app">
-        <img src="img/fpl.jpg" width="1200" height="675" loading="lazy" alt="Fantasy Premier League dashboard showing a squad on a pitch">
-        <div>
-          <h4>Fantasy Premier League dashboard</h4>
-          <p>Enter an FPL team ID to see the squad on a pitch, fixture difficulty and expected points from a hand-built projection. Next.js and TypeScript, with server routes that call the public FPL API.</p>
-          <div class="proj-links"><a href="https://github.com/subarna007/fpl-helper">Code</a></div>
-        </div>
-      </article>
-    </div>
-    <ul class="proj-list compact">
-      <li>
-        <div class="proj-name">All in One Hotel</div>
-        <p>My BSc final-year project: hotel, package, adventure and food booking with admin, vendor and guest dashboards. PHP and MySQL.</p>
-        <div class="proj-links"><a href="https://github.com/subarna007/7sem-project">Code</a></div>
-      </li>
-      <li>
-        <div class="proj-name">Diabetes prediction web app</div>
-        <p>Streamlit app serving a logistic regression model trained on the Pima dataset.</p>
-        <div class="proj-links"><a href="https://github.com/subarna007/streamlitprojects">Code</a></div>
-      </li>
-      <li>
-        <div class="proj-name">Footwear store with admin dashboard</div>
-        <p>React, TypeScript and Tailwind front end made for my Management Information Systems course.</p>
-        <div class="proj-links"><a href="https://github.com/subarna007/mis_project">Code</a></div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section id="try" class="section">
-  <div class="wrap">
-    <h2 class="section-title">Try them in your browser</h2>
-    <p class="section-intro">Small JavaScript projects from when I was learning web development. They run right here; nothing to install.</p>
-    <div class="demo-grid">
-      <a class="demo" href="demos/chessgame/"><img src="img/demo-chessgame.jpg" width="640" height="400" loading="lazy" alt=""><span>Chess against the computer</span></a>
-      <a class="demo" href="demos/wordle/"><img src="img/demo-wordle.jpg" width="640" height="400" loading="lazy" alt=""><span>Wordle</span></a>
-      <a class="demo" href="demos/snakegame/"><img src="img/demo-snakegame.jpg" width="640" height="400" loading="lazy" alt=""><span>Snake</span></a>
-      <a class="demo" href="demos/breakout-game/"><img src="img/demo-breakout-game.jpg" width="640" height="400" loading="lazy" alt=""><span>Breakout</span></a>
-      <a class="demo" href="demos/typetest/"><img src="img/demo-typetest.jpg" width="640" height="400" loading="lazy" alt=""><span>Typing speed test</span></a>
-      <a class="demo" href="demos/translatorapp/"><img src="img/demo-translatorapp.jpg" width="640" height="400" loading="lazy" alt=""><span>Translator</span></a>
-      <a class="demo" href="demos/text-speechapp/"><img src="img/demo-text-speechapp.jpg" width="640" height="400" loading="lazy" alt=""><span>Text to speech</span></a>
-      <a class="demo" href="demos/qrcodegenerator/"><img src="img/demo-qrcodegenerator.jpg" width="640" height="400" loading="lazy" alt=""><span>QR code generator</span></a>
-      <a class="demo" href="demos/texteditor/"><img src="img/demo-texteditor.jpg" width="640" height="400" loading="lazy" alt=""><span>Rich text editor</span></a>
-      <a class="demo" href="demos/tictaktoe/"><img src="img/demo-tictaktoe.jpg" width="640" height="400" loading="lazy" alt=""><span>Tic Tac Toe</span></a>
-      <a class="demo" href="demos/alarmclock/"><img src="img/demo-alarmclock.jpg" width="640" height="400" loading="lazy" alt=""><span>Alarm clock</span></a>
-      <a class="demo" href="demos/spinwheel/"><img src="img/demo-spinwheel.jpg" width="640" height="400" loading="lazy" alt=""><span>Spin wheel</span></a>
-    </div>
-  </div>
-</section>
-
 <section id="about" class="section section-alt">
   <div class="wrap about-grid">
     <div>
       <h2 class="section-title">About</h2>
       <p>I live in Lalitpur, Nepal. I studied computer science, then worked as a junior IT officer and taught computer science at a school before doing my master's in AI and machine learning.</p>
-      <p>My capstone taught me that a good accuracy number can hide a model that misses the cases that matter. Since then I spend as much effort on how a model is tested as on the model itself. For my PhD I would like to work on medical image analysis or NLP, especially for languages and settings with little data.</p>
+      <p>My capstone taught me that a good accuracy number can hide a model that misses the cases that matter. Since then I spend as much effort on how a model is tested as on the model itself. For my PhD I would like to work on computer vision for medical or satellite images, or on NLP, especially for languages and places with little data.</p>
     </div>
     <div>
       <h3 class="group">Education</h3>
@@ -251,7 +182,7 @@
         <li><span class="when">2022–2023</span><div>Junior IT Officer, Brainworks Investment</div></li>
       </ol>
       <h3 class="group">Skills</h3>
-      <p class="skills"><b>Machine learning:</b> PyTorch, timm, Hugging Face Transformers, scikit-learn, Grad-CAM, bootstrap confidence intervals, grouped data splits.<br><b>Programming and data:</b> Python, NumPy, pandas, SQL, Matplotlib, Seaborn, Tableau.<br><b>Tools:</b> Git, Jupyter, Kaggle GPUs, FastAPI, Streamlit, Docker.</p>
+      <p class="skills"><b>Machine learning:</b> PyTorch, timm, Hugging Face Transformers, scikit-learn, Grad-CAM, bootstrap confidence intervals, grouped data splits.<br><b>Programming and data:</b> Python, NumPy, pandas, SQL, Matplotlib, Seaborn, Tableau.<br><b>Remote sensing:</b> Sentinel-2, STAC and the Planetary Computer, xarray, rasterio, GeoPandas.<br><b>Tools:</b> Git, Jupyter, Kaggle GPUs, LaTeX, FastAPI, Docker.</p>
     </div>
   </div>
 </section>
