@@ -177,3 +177,14 @@ h3, h4 { font-family: var(--serif); font-weight: 600; }
 .shot-row.two { grid-template-columns: 1fr 1fr; gap: 10px; }
 .study + .study { margin-top: 96px; padding-top: 72px; border-top: 1px solid var(--rule); }
 @media (max-width: 640px) { .shot-row.two { grid-template-columns: 1fr 1fr; } }
+
+/* papers list and three-up apps */
+.paper-list { list-style: none; margin: 0; padding: 0; }
+.paper-list li { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--rule); }
+.paper-list li:first-child { border-top: 1px solid var(--rule); }
+.paper-list h3 { font-size: 19px; line-height: 1.35; margin: 0 0 6px; }
+.paper-list p { margin: 0; color: var(--ink-2); font-size: 15px; }
+.paper-list .paper-links { margin: 0; flex-wrap: nowrap; }
+.apps.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 960px) { .apps.three { grid-template-columns: 1fr; } .paper-list li { grid-template-columns: 1fr; gap: 10px; } }
+.apps.three .app img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; width: 100%; }

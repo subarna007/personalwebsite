@@ -21,9 +21,8 @@
   <div class="wrap header-row">
     <a class="brand" href="#top">Subarna Dahal</a>
     <nav aria-label="Main">
-      <a href="#glacial">Glacial lakes</a>
-      <a href="#skin">Skin lesions</a>
-      <a href="#nepali">Nepali NLP</a>
+      <a href="#research">Research</a>
+      <a href="#papers">Papers</a>
       <a href="#apps">Apps</a>
       <a href="#about">About</a>
       <a class="nav-contact" href="mailto:dahalsubarna9@gmail.com">Contact</a>
@@ -163,11 +162,50 @@
   </div>
 </section>
 
-<section id="apps" class="section section-alt">
+<section id="papers" class="section section-alt">
+  <div class="wrap">
+    <h2 class="section-title">Papers</h2>
+    <ul class="paper-list">
+      <li>
+        <div>
+          <h3>Mapping glacial lakes in the central Himalaya with Sentinel-2: a spatially held-out comparison of a U-Net and water-index thresholds, with a case study of the Lende–Bhotekoshi floods</h3>
+          <p>Subarna Dahal · 2026 · preprint, 10 pages</p>
+        </div>
+        <p class="paper-links"><a class="btn btn-solid" href="papers/Dahal_2026_glacial_lake_mapping.pdf" target="_blank" rel="noopener">Read</a><a class="btn" href="papers/Dahal_2026_glacial_lake_mapping.pdf" download>PDF</a></p>
+      </li>
+      <li>
+        <div>
+          <h3>Lesion-grouped evaluation of deep learning for seven-class dermoscopic skin lesion classification, with a validation-tuned melanoma screening threshold</h3>
+          <p>Subarna Dahal · 2026 · preprint, 16 pages</p>
+        </div>
+        <p class="paper-links"><a class="btn btn-solid" href="papers/Dahal_2026_skin_lesion_classification.pdf" target="_blank" rel="noopener">Read</a><a class="btn" href="papers/Dahal_2026_skin_lesion_classification.pdf" download>PDF</a></p>
+      </li>
+      <li>
+        <div>
+          <h3>Is fine-tuning still worth it for a low-resource language? A controlled comparison of XLM-RoBERTa, a small open LLM and a character n-gram baseline for Nepali tweet sentiment</h3>
+          <p>Subarna Dahal · 2026 · preprint, 6 pages</p>
+        </div>
+        <p class="paper-links"><a class="btn btn-solid" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" target="_blank" rel="noopener">Read</a><a class="btn" href="papers/Dahal_2026_nepali_sentiment_finetune_vs_llm.pdf" download>PDF</a></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="apps" class="section">
   <div class="wrap">
     <h2 class="section-title">Apps you can try</h2>
-    <p class="section-intro">Two web applications I built and keep up to date. Open them and use them.</p>
-    <div class="apps">
+    <p class="section-intro">Web applications I built. Open them and use them.</p>
+    <div class="apps three">
+      <article class="app" id="dermassist">
+        <img src="img/app-dermassist.jpg" width="1200" height="750" loading="lazy" alt="DermAssist page for uploading a dermoscopic image to analyse">
+        <div>
+          <h3>DermAssist</h3>
+          <p>The skin lesion model from my research, in a web app: upload a dermoscopic image to get the seven-class probabilities, Grad-CAM maps, ABCD shape and colour measurements and similar cases. A research prototype, not a medical device.</p>
+          <p class="paper-links">
+            <a class="btn" href="https://github.com/subarna007/skin-lesion-classification-isic2018">Code</a>
+          </p>
+        </div>
+      </article>
       <article class="app" id="hotel">
         <a href="projects/hotel/"><img src="img/app-hotel.jpg" width="1200" height="755" loading="lazy" alt="All in One Hotel home page with a search box for rooms, adventures and dining"></a>
         <div>
@@ -194,7 +232,7 @@
   </div>
 </section>
 
-<section id="about" class="section">
+<section id="about" class="section section-alt">
   <div class="wrap about-grid">
     <div>
       <h2 class="section-title">About</h2>
