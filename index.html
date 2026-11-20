@@ -125,7 +125,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2 class="section-title">Research</h2>
-      <p class="section-intro">Three projects, each written up as a short paper: why I did it, what I did, what I found and what is still open. Every number comes from code you can run yourself.</p>
+      <p class="section-intro">Three finished projects, each written up as a short paper: why I did it, what I did, what I found and what is still open. A fourth is running now. Every number comes from code you can run yourself.</p>
     </div>
 
     <article class="study reveal" id="glacial">
@@ -225,6 +225,34 @@
         <figcaption>Macro-F1 by method.</figcaption>
         <button class="zoom" type="button"><img src="img/nepali-per-class.jpg" width="1400" height="626" loading="lazy" alt="Bar chart of F1 for negative, neutral and positive tweets for each method."><span class="zoom-ic"><svg class="ic"><use href="#i-expand"/></svg></span></button>
         <figcaption>F1 per class. Neutral tweets are the weak spot for all methods.</figcaption>
+      </figure>
+    </article>
+
+    <article class="study study-flip reveal" id="vlm">
+      <div class="study-text">
+        <p class="tag tag-live"><span class="dot" aria-hidden="true"></span>In progress</p>
+        <h3>Do vision-language models look at the lesion?</h3>
+        <p class="kicker">A pilot study of MedGemma and Qwen2.5-VL on skin images</p>
+        <p>AI models that read a skin photo and answer in words are now free to download, including medical ones such as Google's MedGemma. Their answers sound convincing, but that does not show the answer came from the lesion. Older skin-cancer classifiers were caught using surgical ink and rulers in the photo instead. This pilot checks whether two open vision-language models do the same, on 256 dermoscopic images from Derm7pt and 205 smartphone photos from PAD-UFES-20.</p>
+        <ul class="points">
+          <li><b>Lesion removed.</b> The lesion is painted over with skin. Does the model still give a confident diagnosis?</li>
+          <li><b>Background changed.</b> Only the skin around the lesion changes: darker skin, surgical-marker ink or a ruler. The lesion pixels stay identical. Does the diagnosis change?</li>
+          <li><b>Stated features.</b> The model is asked about the seven criteria dermatologists use (the 7-point checklist) and compared with expert labels.</li>
+          <li><b>Confidence.</b> Is the model as often right as it is sure?</li>
+        </ul>
+        <p class="status"><b>Status:</b> the code is finished and tested, and both models are running on Kaggle (started 20 November 2026). The results and the paper will be posted here when the runs finish.</p>
+        <p class="paper-links">
+          <a class="btn" href="https://github.com/subarna007/derm-vlm-shortcut-pilot"><svg class="ic"><use href="#i-code"/></svg>Code and method</a>
+        </p>
+      </div>
+      <figure class="study-fig">
+        <div class="tests" aria-label="The four tests">
+          <div class="test"><span class="test-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="6"/><ellipse cx="24" cy="24" rx="10" ry="8" class="ghost"/></svg></span><b>Lesion removed</b><span>No lesion left. A careful model should say it cannot tell.</span></div>
+          <div class="test"><span class="test-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="6" class="dark"/><ellipse cx="24" cy="24" rx="10" ry="8" class="lesion"/><path d="M8 40h32" class="ink"/></svg></span><b>Background changed</b><span>Same lesion, different surroundings. The diagnosis should not move.</span></div>
+          <div class="test"><span class="test-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 14h28M10 24h28M10 34h18"/><path d="M34 31l3 3 6-7" class="ok"/></svg></span><b>Stated features</b><span>What the model says it sees, checked against expert labels.</span></div>
+          <div class="test"><span class="test-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 42L42 6" class="ghost"/><path d="M6 42c10-4 18-14 22-26" /><circle cx="28" cy="16" r="3" class="lesion"/></svg></span><b>Confidence</b><span>Calibration: is 80% sure right 80% of the time?</span></div>
+        </div>
+        <figcaption>The four tests. Every image is asked as a multiple-choice question with a "cannot be determined" option.</figcaption>
       </figure>
     </article>
   </div>
